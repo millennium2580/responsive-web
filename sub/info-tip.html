@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/sub/info-tip.css">
-    <script src="../scripts/sub/서브페이지명.js" defer></script>
+    <script src="../scripts/sub/info-tip.js" defer></script>
 </head>
 <body>
 
@@ -41,14 +41,19 @@
             <form class="tip-search">
                 <fieldset>
                     <legend class="blind">청년꿀팁 검색</legend>
-
-                    <label class="label">키워드</label>
-
-                    <select class="select">
-                        <option>제목</option>
-                    </select>
-
-                    <input type="text" class="input">
+                    <ul class="row">
+                        <li class="label">키워드</li>
+                        <li>
+                            <dl class="select">
+                                <dt>전체<img src="" alt="펼치기"></dt>
+                                <dd>제목</dd>
+                                <dd>내용</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <input type="text" class="input">
+                        </li>
+                    </ul>
 
                     <button type="reset" class="reset">초기화</button>
                     <button type="submit" class="submit">검색</button>

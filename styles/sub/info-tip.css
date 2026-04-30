@@ -1,0 +1,52 @@
+#main {
+    max-width: 95%;
+    margin-inline: auto;
+}
+h1 {
+    margin: 0 0 48px 0;
+}
+
+/* 페이지 정보 */
+.cont-info {
+    padding: 40px 36px 40px 140px;
+    margin-bottom: 64px;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+}
+
+/* 검색 영역 */
+.tip-search fieldset{
+    padding: 32px 24px;
+    margin-bottom: 40px;
+    text-align: center;
+    border: 1px solid #D0D5DD;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+}
+.row {display: flex;}
+.row li {flex-shrink: 0;}
+
+.tip-search .label{
+    font-size: 15px;
+    font-weight: 700;
+}
+.tip-search .select{
+    padding: 4px 32px 4px 12px;
+    border: 1px solid #D0D5DD;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.reset {
+    width: 100px;
+    padding: 8px 12px;
+    color: #5C5C5C;
+    border: 1px solid #D0D5DD;
+    background-color: white;
+}
+.submit {
+    width: 100px;
+    padding: 8px 12px;
+    color: white;
+    background-color: #5C5C5C;
+}
