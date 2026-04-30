@@ -18,20 +18,27 @@
         <section id="main">
             <h1>청년신문고</h1>
 
-            <div class="sub-search-area">
-                <div class="search-top">
-                    <span class="sub-search-keyword">키워드</span>
-                    <select>제목</select>
-                    <input type="text" class="sub-search-input">
-                </div>
-                <div class="search-btm">
+            <form class="board-search">
+                <fieldset>
+                    <legend class="blind">청년신문고 검색</legend>
+
+                    <label class="search-label">키워드</label>
+
+                    <select class="search-select">
+                        <option>제목</option>
+                    </select>
+
+                    <input type="text" id="searchInput" class="search-input">
+
                     <button class="search-reset">초기화</button>
                     <button class="search-submit">검색</button>
-                </div>
-            </div>
-            <table>
-                
-                <!-- 데스크탑에 들어갈 내용 
+                </fieldset>
+            </form>
+
+            <table class="board-table">
+                <caption class="blind">청년신문고 목록</caption>
+                <!-- 데스크탑에 들어갈 내용 -->
+                <!-- 
                 <thead>
                     <tr>
                         <th>번호</th>
@@ -40,9 +47,17 @@
                         <th>등록일</th>
                         <th>상태</th>
                     </tr>
-                </thead> -->
-                
-                <!-- <tfoot></tfoot> 이게 여기서 필요한가..? -->
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="" alt="자물쇠 잠김"></td>
+                        <td>온통청년 청년정책 통합검색 기능 개선 제안 드립니다.</td>
+                        <td>2026.04.11</td>
+                        <td class="board-state">답변완료</td>
+                    </tr>
+                </tbody>
+                -->
 
                 <tbody>
                     <tr>
@@ -50,7 +65,7 @@
                     </tr>
                     <tr>
                         <th>공개여부</th>
-                        <td>img src="" alt="자물쇠 잠김"</td>
+                        <td><img src="" alt="자물쇠 잠김"></td>
                     </tr>
                     <tr>
                         <th>제목</th>
@@ -62,12 +77,12 @@
                     </tr>
                     <tr>
                         <th>상태</th>
-                        <td><span>답변완료</span></td>
+                        <td class="board-state">답변완료</td>
                     </tr>
                 </tbody>
             </table>
 
-            <div class="page-num-box"></div>
+            <div class="pagination"></div>
         </section><!-- // #main End -->
     </div><!-- // .container End -->
 

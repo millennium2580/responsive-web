@@ -75,9 +75,11 @@
 
             <!-- 청년정책 현황 -->
             <!-- div "policy-status" -->
-                <h2>청년정책 현황</h2>
-                <p>아래 검색된 정책을 비교 가능합니다.</p>
-                <ul class="compare-box">
+                <!-- policy-tit -->
+                    <h2>청년정책 현황</h2>
+                    <p>아래 검색된 정책을 비교 가능합니다.</p>
+                <!-- policy-tit -->
+                <ul class="policy-compare-box">
                     <li>
                         <strong>비교 정책 01</strong>
                         <p>비교할 정책을 선택해 주세요</p>
@@ -87,14 +89,17 @@
                         <p>비교할 정책을 선택해 주세요</p>
                     </li>
                 </ul>
-                <button class="compare-submit">정책 비교하기</button>
+                <button class="policy-compare-submit">정책 비교하기</button>
             <!-- div "policy-status" -->
-            
+                
             <!-- div "policy-list" -->
                 <!-- 목록 필터 -->
                 <!-- div "list-filter" -->
-                    <p>총 2,263건의 정책정보가 있습니다.</p>
-                    <button class="deadline-toggle">마감제외</button>
+                    <label>
+                        <input type="checkbox">
+                        마감제외
+                        <span class="deadline-toggle"></span>
+                    </label>
                 <!-- div "list-filter" -->
 
                 <!-- 정책 목록 -->
