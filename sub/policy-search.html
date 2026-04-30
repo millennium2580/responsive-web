@@ -20,66 +20,65 @@
         <section id="main">
             <h1>청년정책 통합검색</h1>
 
-            <!-- 검색필터 -->
-            <form class="search-form">
-                <fieldset class="search-field">
-                    <legend class="blind">청년정책 상세검색</legend> <!-- 제목 필수 -->
-
-                    <input type="text">
-                    <button class="search-reset">초기화</button>
-                    <button class="search-submit">검색</button>
-
-                    <button class="detail-toggle">상세검색 열기</button>
-                </fieldset>
-            </form>
-
-            <!-- 카테고리 버튼 -->
-            <nav class="category-filter">
-                <ul>
-                    <li><button>전체</button></li>
-                    <li><button>일자리</button></li>
-                    <li><button>주거</button></li>
-                    <li><button>교육·직업훈련</button></li>
-                    <li><button>금융·복지·문화</button></li>
-                    <li><button>참여·기반</button></li>
-                </ul>
-            </nav>
-
-            <!-- 위치필터 -->
-            <!-- div "region-filter" -->
-                <ul class="region-filter-all">
-                    <li><button>전체</button></li>
-                </ul>
-
-                <ul class="region-filter-list">
-                    <li><button>중앙부처</button></li>
-                    <li><button>서울</button></li>
-                    <li><button>부산</button></li>
-                    <li><button>대구</button></li>
-                    <li><button>인천</button></li>
-                    <li><button>광주</button></li>
-                    <li><button>대전</button></li>
-                    <li><button>울산</button></li>
-                    <li><button>세종</button></li>
-                    <li><button>경기</button></li>
-                    <li><button>충북</button></li>
-                    <li><button>충남</button></li>
-                    <li><button>전북</button></li>
-                    <li><button>전남</button></li>
-                    <li><button>경북</button></li>
-                    <li><button>경남</button></li>
-                    <li><button>강원</button></li>
-                    <li><button>제주</button></li>
-                </ul>
-            <!-- div "region-filter" -->
+            <div class="search-filter">
+                <!-- 검색필터 -->
+                <form class="search">
+                    <fieldset>
+                        <legend class="blind">청년정책 상세검색</legend> <!-- 제목 필수 -->
+    
+                        <input type="text">
+                        <button class="search-reset">초기화</button>
+                        <button class="search-submit">검색</button>
+    
+                        <button class="detail-toggle">상세검색 열기</button>
+                    </fieldset>
+                </form>
+    
+                <!-- 카테고리 버튼 -->
+                <nav class="policy-category">
+                    <ul>
+                        <li><button>전체</button></li>
+                        <li><button>일자리</button></li>
+                        <li><button>주거</button></li>
+                        <li><button>교육·직업훈련</button></li>
+                        <li><button>금융·복지·문화</button></li>
+                        <li><button>참여·기반</button></li>
+                    </ul>
+                </nav>
+    
+                <!-- 위치필터 -->
+                <div class="region">
+                    <ul>
+                        <li><button>전체</button></li>
+                        <li><button>중앙부처</button></li>
+                        <li><button>서울</button></li>
+                        <li><button>부산</button></li>
+                        <li><button>대구</button></li>
+                        <li><button>인천</button></li>
+                        <li><button>광주</button></li>
+                        <li><button>대전</button></li>
+                        <li><button>울산</button></li>
+                        <li><button>세종</button></li>
+                        <li><button>경기</button></li>
+                        <li><button>충북</button></li>
+                        <li><button>충남</button></li>
+                        <li><button>전북</button></li>
+                        <li><button>전남</button></li>
+                        <li><button>경북</button></li>
+                        <li><button>경남</button></li>
+                        <li><button>강원</button></li>
+                        <li><button>제주</button></li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- 청년정책 현황 -->
-            <!-- div "policy-status" -->
-                <!-- policy-tit -->
+            <div class="compare">
+                <div class="info">
                     <h2>청년정책 현황</h2>
                     <p>아래 검색된 정책을 비교 가능합니다.</p>
-                <!-- policy-tit -->
-                <ul class="policy-compare-box">
+                </div>
+                <ul class="box">
                     <li>
                         <strong>비교 정책 01</strong>
                         <p>비교할 정책을 선택해 주세요</p>
@@ -89,39 +88,43 @@
                         <p>비교할 정책을 선택해 주세요</p>
                     </li>
                 </ul>
-                <button class="policy-compare-submit">정책 비교하기</button>
-            <!-- div "policy-status" -->
+                <button class="btn">정책 비교하기</button>
+            </div>
                 
-            <!-- div "policy-list" -->
+            <div class="policy-list">
                 <!-- 목록 필터 -->
-                <!-- div "list-filter" -->
+                <div class="filter">
+                    <span>총 2,316건</span>
                     <label>
                         <input type="checkbox">
                         마감제외
                         <span class="deadline-toggle"></span>
                     </label>
-                <!-- div "list-filter" -->
-
+                </div>
                 <!-- 정책 목록 -->
-                <ul class="policy-card-list">
-                    <li class="policy-card">
-                        <strong class="policy-state">마감</strong>
-                        <!-- policy-right-object -->
-                            <button class="btn-share">공유</button>
-                            <button class="btn-favorites">스크랩</button>
-                        <!-- policy-right-object -->
-                        <ul class="policy-meta">
-                            <li>태그</li>
-                            <li>
-                                <label>
-                                    <input type="checkbox">
-                                    정책비교
-                                </label>
-                            </li>
+                <ul class="card-list">
+                    <li class="card">
+                        <ul class="top">
+                            <li><strong class="state">마감</strong></li>
+                            <li><button type="button" class="share">공유</button></li>
+                            <li><button type="button" class="scrap">스크랩</button></li>
                         </ul>
-                        <dl class="policy-info">
-                            <dt>[남구] 제5기 청년네트워크 위원 추가 모집</dt>
-                            <dd>
+
+                        <div class="meta">
+                            <ul class="category">
+                                <li>참여·기반</li>
+                                <li>광주시청</li>
+                            </ul>
+
+                            <label class="compare-check">
+                                <input type="checkbox">
+                                정책비교
+                            </label>
+                        </div>
+
+                        <dl class="info">
+                            <dt class="tit">[남구] 제5기 청년네트워크 위원 추가 모집</dt>
+                            <dd class="desc">
                                 ❍ 임    기 : 위원 선정일 ~ '27. 2. 28.
                                 ❍ 기    능 : 지역 청년을 대표하는 소통과 협력 창구
                                 - 청년의견 수렴, 청년문제 발굴·조사 및 개선방안 모색
@@ -135,153 +138,24 @@
                                     - (수    당) 분과별 회의참여 시 예산범위 내 수당(회당 2만원) 지급
                                     - (표    창) 우수활동자 구청장 표창 수여
                             </dd>
-                            <dd>
-                                <strong>신청기간</strong>마감
+                            <dd class="period">
+                                <strong>신청기간</strong>
+                                마감
                             </dd>
                         </dl>
 
-                        <button class="policy-detail">자세히보기</button>
+                        <a href="" class="detail">자세히보기</a>
 
-                        <ul class="policy-tag">
+                        <ul class="tag">
                             <li>#보조금</li>
                             <li>#장기미취업청년</li>
                         </ul>
-                    </li> <!-- 남구 제5기~ -->
-                    <li class="policy-card">
-                        <strong class="policy-state">마감</strong>
-                        <!-- policy-right-object -->
-                            <button class="btn-share">공유</button>
-                            <button class="btn-favorites">스크랩</button>
-                        <!-- policy-right-object -->
-                        <ul class="policy-meta">
-                            <li>태그</li>
-                            <li>
-                                <label>
-                                    <input type="checkbox">
-                                    정책비교
-                                </label>
-                            </li>
-                        </ul>
-                        <dl class="policy-info">
-                            <dt>(동구)2026년 상반기 광주광역시 재정지원 일자리사업</dt>
-                            <dd>
-                                ○ 취업취약계층 시민들에게 일자리를 제공하여 생활안정 및 자립기반 마련에 도움을 주고자 
-                                「2026년 상반기 광주광역시 재정지원일자리사업(동구)」참여자를 모집합니다.
-                            </dd>
-                            <dd>
-                                <strong>신청기간</strong>마감
-                            </dd>
-                        </dl>
-
-                        <button class="policy-detail">자세히보기</button>
-
-                        <ul class="policy-tag">
-                            <li>인턴</li>
-                        </ul>
-                    </li> <!-- (동구)2026년 상반기 광주광역시 재정지원 일자리사업 -->
-                    <li class="policy-card">
-                        <strong class="policy-state">마감</strong>
-                        <!-- policy-right-object -->
-                            <button class="btn-share">공유</button>
-                            <button class="btn-favorites">스크랩</button>
-                        <!-- policy-right-object -->
-                        <ul class="policy-meta">
-                            <li>태그</li>
-                            <li>
-                                <label>
-                                    <input type="checkbox">
-                                    정책비교
-                                </label>
-                            </li>
-                        </ul>
-                        <dl class="policy-info">
-                            <dt>광주청년위원회(제11기)</dt>
-                            <dd>
-                                청년들의 시정 참여를 보장하고 청년의 의견을 반영하기 위해 다양한 분야의 청년들로 구성된 청년위원회 운영
-                            </dd>
-                            <dd>
-                                <strong>신청기간</strong>마감
-                            </dd>
-                        </dl>
-
-                        <button class="policy-detail">자세히보기</button>
-
-                        <ul class="policy-tag">
-                            <li>보조금</li>
-                            <li>장기미취업청년</li>
-                        </ul>
-                    </li> <!-- 광주청년위원회(제11기) -->
-                    <li class="policy-card">
-                        <strong class="policy-state">마감</strong>
-                        <!-- policy-right-object -->
-                            <button class="btn-share">공유</button>
-                            <button class="btn-favorites">스크랩</button>
-                        <!-- policy-right-object -->
-                        <ul class="policy-meta">
-                            <li>태그</li>
-                            <li>
-                                <label>
-                                    <input type="checkbox">
-                                    정책비교
-                                </label>
-                            </li>
-                        </ul>
-                        <dl class="policy-info">
-                            <dt>(남구)2026년 광주광역시 재정지원 일자리사업</dt>
-                            <dd>
-                                광주광역시 남구에서는 취업취약계층 주민들에게 일자리를 제공하여 
-                                생활안정 및 자립기반 마련에 도움을 주고자 2026년 상반기 남구 재정지원 
-                                일자리사업 참여자를 모집 공고합니다.
-                            </dd>
-                            <dd>
-                                <strong>신청기간</strong>마감
-                            </dd>
-                        </dl>
-
-                        <button class="policy-detail">자세히보기</button>
-
-                        <ul class="policy-tag">
-                            <li>인턴</li>
-                        </ul>
-                    </li> <!-- (남구)2026년 광주광역시 재정지원 일자리사업 -->
-                    <li class="policy-card">
-                        <strong class="policy-state">마감</strong>
-                        <!-- policy-right-object -->
-                            <button class="btn-share">공유</button>
-                            <button class="btn-favorites">스크랩</button>
-                        <!-- policy-right-object -->
-                        <ul class="policy-meta">
-                            <li>태그</li>
-                            <li>
-                                <label>
-                                    <input type="checkbox">
-                                    정책비교
-                                </label>
-                            </li>
-                        </ul>
-                        <dl class="policy-info">
-                            <dt>(접수 마감)2026년 11기 광주 청년 13(일+삶)통장</dt>
-                            <dd>
-                                지역 청년 특성 및 수요에 적합한 자산 형성 기회를 
-                                제공함으로써 경제적 자립 및 생활 안정 지원
-                            </dd>
-                            <dd>
-                                <strong>신청기간</strong>마감
-                            </dd>
-                        </dl>
-
-                        <button class="policy-detail">자세히보기</button>
-
-                        <ul class="policy-tag">
-                            <li>보조금</li>
-                        </ul>
-                    </li> <!-- (접수 마감)2026년 11기 광주 청년 13(일+삶)통장 -->
-
+                    </li> 
                 </ul>
-
                 <!-- 페이지번호 -->
-                <div class="pagination"></div>
+                <p class="pagination"></p>
             <!-- div "policy-list" -->
+            </div>
         </section><!-- // #main End -->
     </div><!-- // .container End -->
 </body>
