@@ -71,13 +71,12 @@
                     <li><button>강원</button></li>
                     <li><button>제주</button></li>
                 </ul>
-
+            <!-- div "region-filter" -->
 
             <!-- 청년정책 현황 -->
             <!-- div "policy-status" -->
                 <h2>청년정책 현황</h2>
                 <p>아래 검색된 정책을 비교 가능합니다.</p>
-
                 <ul class="compare-box">
                     <li>
                         <strong>비교 정책 01</strong>
@@ -88,28 +87,28 @@
                         <p>비교할 정책을 선택해 주세요</p>
                     </li>
                 </ul>
-
                 <button class="compare-submit">정책 비교하기</button>
-
+            <!-- div "policy-status" -->
             
             <!-- div "policy-list" -->
                 <!-- 목록 필터 -->
                 <!-- div "list-filter" -->
                     <p>총 2,263건의 정책정보가 있습니다.</p>
                     <button class="deadline-toggle">마감제외</button>
+                <!-- div "list-filter" -->
 
                 <!-- 정책 목록 -->
                 <ul class="policy-card-list">
                     <li class="policy-card">
-                        <p class="policy-state">마감</p>
-
+                        <strong class="policy-state">마감</strong>
+                        <!-- policy-right-object -->
+                            <button class="btn-share">공유</button>
+                            <button class="btn-favorites">스크랩</button>
+                        <!-- policy-right-object -->
                         <ul class="policy-meta">
                             <li>태그</li>
-                            <li>
-                                <button>정책비교</button>
-                            </li>
+                            <li><button>정책비교</button></li>
                         </ul>
-
                         <dl class="policy-info">
                             <dt>[남구] 제5기 청년네트워크 위원 추가 모집</dt>
                             <dd>
@@ -136,11 +135,12 @@
                         <ul class="policy-tag">
                             <li>태그</li>
                         </ul>
-                    </li>
+                    </li> <!-- 남구 제5기~ -->
                 </ul>
 
                 <!-- 페이지번호 -->
                 <div class="pagination"></div>
+            <!-- div "policy-list" -->
         </section><!-- // #main End -->
     </div><!-- // .container End -->
 </body>
