@@ -18,42 +18,65 @@
         <section id="main">
             <h1>청년꿀팁</h1>
 
-            <ul>
-                <li><button>전체</button></li>
-                <li><button>정책소식</button></li>
-                <li><button>쉬운 용어풀이</button></li>
-                <li><button>청년뉴스</button></li>
-            </ul>
+            <!-- 카테고리 -->
+            <nav class="tip-category">
+                <ul>
+                    <li><button type="button">전체</button></li>
+                    <li><button type="button">정책소식</button></li>
+                    <li><button type="button">쉬운 용어풀이</button></li>
+                    <li><button type="button">청년뉴스</button></li>
+                </ul>
+            </nav>
 
-            <div class="sub-search-area">
-                <div class="search-top">
-                    <span class="sub-search-keyword">키워드</span>
-                    <select>제목</select>
-                    <input type="text" class="sub-search-input">
-                </div>
-                <div class="search-btm">
+            <!-- 검색 영역 -->
+            <form class="tip-search">
+                <fieldset>
+                    <legend class="blind">청년꿀팁 검색</legend>
+
+                    <label class="search-label">키워드</label>
+
+                    <select class="search-select">
+                        <option>제목</option>
+                    </select>
+
+                    <input type="text" id="tipSearchInput" class="search-input">
+
                     <button class="search-reset">초기화</button>
                     <button class="search-submit">검색</button>
-                </div>
-            </div>
-            <ul class="albam-list">
-                <li class="albam-item">
-                    <div class="albam-img-mask">img src="" alt="취업애로청년"</div>
-                    <div class="albam-cont">
-                        <div class="albam-top">
-                            <span class="albam-top-cate">카테고리 스펜</span>
-                            <button class="albam-top-share">공유하기버튼</button>
+                </fieldset>
+            </form>
+
+            <!-- 청년꿀팁 목록 -->
+            <ul class="tip-list">
+                <li class="tip-item">
+                    <article class="tip-card">
+                        <figure class="tip-img">
+                            <img src="" alt="취업애로청년">
+                        </figure>
+
+                        <div class="tip-cont">
+                            <header class="tip-head">
+                                <p class="tip-category-name">카테고리 스펜</p>
+                                <button class="tip-share">공유하기버튼</button>
+                            </header>
+
+                            <dl class="tip-info">
+                                <dt class="tip-title">[취업애로청년]편</dt>
+                                <dd class="tip-meta">
+                                    <strong>등록일</strong>
+                                    2025.11.26
+                                </dd>
+                                <dd class="tip-meta">
+                                    <strong>조회수</strong>
+                                    421
+                                </dd>
+                            </dl>
                         </div>
-                        <dl class="albam-info">
-                            <dt class="albam-tit">[취업애로청년]편</dt>
-                            <dd class="albam-meta"><strong>등록일</strong>2025.11.26</dd>
-                            <dd class="albam-meta"><strong>조회수</strong>421</dd>
-                        </dl>
-                    </div>
+                    </article>
                 </li>
             </ul>
 
-            <div class="page-num-box"></div>
+            <div class="pagination"></div>
         </section><!-- // #main End -->
     </div><!-- // .container End -->
 
