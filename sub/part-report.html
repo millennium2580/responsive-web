@@ -15,6 +15,7 @@
         <aside id="aside">
             
         </aside><!-- // #aside End -->
+
         <section id="main">
             <h1>청년신문고</h1>
 
@@ -32,66 +33,86 @@
                 <fieldset>
                     <legend class="blind">청년신문고 검색</legend>
 
-                    <label class="search-label">키워드</label>
+                    <label class="label">키워드</label>
 
-                    <select class="search-select">
+                    <select class="select">
                         <option>제목</option>
                     </select>
 
-                    <input type="text" class="search-input">
+                    <input type="text" class="input">
 
-                    <button class="search-reset">초기화</button>
-                    <button class="search-submit" type="submit">검색</button>
+                    <button type="reset" class="reset">초기화</button>
+                    <button type="submit" class="submit">검색</button>
                 </fieldset>
             </form>
 
-            <!-- 목록 필터 -->
-            <div class="list-filter">
-                <label>
-                    <input type="checkbox">
-                    마감제외
-                    <span class="deadline-toggle"></span>
-                </label>
-            </div>
-    
-            <!-- 신문고 목록 -->
-            <table class="table-board">
-                <caption class="blind">청년신문고 목록</caption>
-                <thead class="table-head">
-                    <tr>
-                        <th>번호</th>
-                        <th>공개여부</th>
-                        <th>제목</th>
-                        <th>등록일</th>
-                        <th>상태</th>
-                    </tr>
-                </thead> 
-                <tbody class="table-body">
-                    <tr class="board-table-row">
-                        <td class="board-num">1</td>
-                        <td class="board-lock">
-                            <span class="board-label">공개여부</span>
-                            <img src="" alt="자물쇠 잠김">
-                        </td>
-                        <td class="board-title">
-                            <span class="board-label">제목</span>
-                            온통청년 청년정책 통합검색 기능 개선 제안 드립니다.
-                        </td>
-                        <td class="board-date">
-                            <span class="board-label">등록일</span>
-                            2026.04.11
-                        </td>
-                        <td class="board-state">
-                            <span class="board-label">상태</span>
-                            답변완료
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <button class="board-write">의견 작성하기</button>
+            <div class="board-list">
+                <!-- 목록 필터 -->
+                <div class="filter">
+                    <label>
+                        <input type="checkbox">
+                        마감제외
+                        <span class="toggle"></span>
+                    </label>
+                </div>
 
-            <div class="pagination"></div>
-        </section><!-- // #main End -->
+                <!-- 신문고 목록 -->
+                <table class="table">
+                    <caption class="blind">청년신문고 목록</caption>
+
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>공개여부</th>
+                            <th>제목</th>
+                            <th>등록일</th>
+                            <th>상태</th>
+                        </tr>
+                    </thead> 
+
+                    <tbody>
+                        <tr class="row">
+                            <td class="num">1</td>
+
+                            <td class="lock">
+                                <span class="label">공개여부</span>
+                                <img src="" alt="자물쇠 잠김">
+                            </td>
+
+                            <td class="tit">
+                                <span class="label">제목</span>
+                                온통청년 청년정책 통합검색 기능 개선 제안 드립니다.
+                            </td>
+
+                            <td class="date">
+                                <span class="label">등록일</span>
+                                2026.04.11
+                            </td>
+
+                            <td class="state">
+                                <span class="label">상태</span>
+                                답변완료
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="write">의견 작성하기</button>
+
+                <!-- 페이지번호 -->
+                <p class="page-num-box">
+                    <button>맨앞</button>
+                    <button>이전</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>다음</button>
+                    <button>맨끝</button>
+                </p>
+            </div>
+        </section>
     </div><!-- // .container End -->
     
 </body>

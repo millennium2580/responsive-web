@@ -19,7 +19,7 @@
             <h1>청년꿀팁</h1>
 
             <!-- 카테고리 -->
-            <nav class="tip-category">
+            <nav class="tab">
                 <ul>
                     <li><button>전체</button></li>
                     <li><button>정책소식</button></li>
@@ -33,51 +33,56 @@
                 <fieldset>
                     <legend class="blind">청년꿀팁 검색</legend>
 
-                    <label class="search-label">키워드</label>
+                    <label class="label">키워드</label>
 
-                    <select class="search-select">
+                    <select class="select">
                         <option>제목</option>
                     </select>
 
-                    <input type="text" class="search-input">
+                    <input type="text" class="input">
 
-                    <button class="search-reset">초기화</button>
-                    <button class="search-submit">검색</button>
+                    <button type="reset" class="reset">초기화</button>
+                    <button type="submit" class="submit">검색</button>
                 </fieldset>
             </form>
 
             <!-- 청년꿀팁 목록 -->
             <ul class="tip-list">
-                <li class="tip-item">
-                    <article class="tip-card">
-                        <figure class="tip-img">
-                            <img src="" alt="취업애로청년">
-                        </figure>
+                <li class="item">
+                    <div class="img-mask"><img src="" alt="2026년 여행가는 봄 캠페인"></div>
 
-                        <div class="tip-cont">
-                            <header class="tip-head">
-                                <p class="tip-category-name">카테고리 스펜</p>
-                                <button class="tip-share">공유하기버튼</button>
-                            </header>
+                    <div class="top">
+                        <span class="cate">카테고리 스펜</span>
+                        <button class="share">공유하기버튼</button>
+                    </div>
 
-                            <dl class="tip-info">
-                                <dt class="tip-title">[취업애로청년]편</dt>
-                                <dd class="tip-meta">
-                                    <strong>등록일</strong>
-                                    2025.11.26
-                                </dd>
-                                <dd class="tip-meta">
-                                    <strong>조회수</strong>
-                                    421
-                                </dd>
-                            </dl>
-                        </div>
-                    </article>
+                    <dl class="info">
+                        <dt class="tit">2026년 여행가는 봄 캠페인</dt>
+                        <dd class="meta">
+                            <strong>등록일</strong>
+                            2026.04.16
+                        </dd>
+                        <dd class="meta">
+                            <strong>조회수</strong>
+                            3570
+                        </dd>
+                    </dl>
                 </li>
             </ul>
 
-            <div class="pagination"></div>
-        </section><!-- // #main End -->
+            <!-- 페이지번호 -->
+            <p class="page-num-box">
+                <button>맨앞</button>
+                <button>이전</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>다음</button>
+                <button>맨끝</button>
+            </p>
+        </section>
     </div><!-- // .container End -->
 
 </body>
