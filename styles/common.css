@@ -54,6 +54,7 @@ h1 {
     font-weight: 700;
     line-height: 1.2;
     color: #111;
+    margin-bottom: 48px;
 }
 h2 {
     font-size: 25px;
@@ -67,6 +68,7 @@ h3 {
     line-height: 1.4;
     color: #111;
 }
+
 a { color:#1D56BC; line-height: 1.4; font-size: 15px; }
 .txt-link { color:#1d1d1d; }
 a:hover { color:#1D56BC; text-decoration: underline; }
@@ -80,6 +82,10 @@ input {
     font-size: 16px;
     color: #333;
 }
+
+/* 아이콘/이미지 사이즈 */
+img {width: 100%; height: 100%; object-fit: cover; align-items: center;}
+.icon-f {width: 20px; height: 20px;}
 
 
 /* 메인버튼 / 서브버튼 / 온 오프 버튼 따로 넣어야 할 듯 */
@@ -98,8 +104,6 @@ button:hover {
 }
 
 /* 폰트 */
-
-
 .txt-caption {
     font-size: 14px;
     font-weight: 400;
@@ -108,6 +112,7 @@ button:hover {
 }
 
 /* 3. 레이아웃 클래스 (공통 사용) */
+#main { padding: 0 15px; }
 .wrapper { width: 100%; min-width: 320px; }
 .container { width: 100%; }
 .inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; background-color: #ececec; }
@@ -139,53 +144,76 @@ button:hover {
     }
 }
 
-/* 서브 탭 */
+/* 메인 탭 */
 .main-tab {}
-.sub-tab {}        
-.sub-tab-btn {}
 
-/* 꿀팁 (각 페이지 상단 정보) */
+/* 서브 탭 - 지혜 */
+.sub-tab {}        
+.sub-tab .prev {}
+.sub-tab .next {}
+
+/* 꿀팁 (각 페이지 상단 정보) - 지혜 */
 .cont-info {}
 
-/* 페이지 번호 영역 */
-.page-num-box {}
+/* 서브페이지 맨 위 네비 - 윤진 */
+.sub-nav {}
 
-/* 페이지 번호 */
-.page-num {}
+/* 버튼 - 윤진 */
+    /* 메인버튼 */
+    .main-btn {}
+    /* 서브버튼 */
+    .sub-btn {}
+/* -- */
 
-/* 이전 다음 */
-.page-prev {}
-.page-next {}
+/* 페이지 번호 - 다슬 */
+    .page-num-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .page-num-box button {
+        width: 40px; 
+        height: 40px;
+        border-radius: 6px;
+        text-align: center;
+        line-height : 40px
+        
+    }
 
-/* 맨앞 맨뒤 */
-.page-first {}
-.page-last {}
+    /* 페이지 번호 온오프 */
+    .page-num-box .num {
+    }
+    .page-num-box .num.on {
+        background-color: #E1EBFF;
+    }
 
-/* 폼영역 */
-.sub-search-area {}
+    /* 이전 다음 */
+    .page-num-box .prev {
 
-.sub-search-category {}
-.sub-search-keyword {}
-.sub-search-input {}
+    }
+    .page-num-box .next {
 
-.sub-search-date-start {}
-.sub-search-date-end {}
+    }
 
-.search-submit {}
-.search-reset {}
+    /* 맨앞 맨뒤 */
+    .page-num-box .first {
 
-/* 앨범 목록 */
-.albam-list {}
-.albam-item {}
+    }
+    .page-num-box .last {
 
-.albam-img-mask {}
-.albam-img-mask img {}
+    }
+/* -- */
 
-.albam-cont {}
+/* 폼영역 - 지수 */
+.sub-search-area{}
 
-.albam-top {}
-.albam-top-cate {}
-.albam-top-share {}
-.albam-info {}
-.albam-tit {}
-.albam-meta {}
+.sub-search-area .keyword {}
+.sub-search-area .input {}
+
+.sub-search-area .submit {}
+.sub-search-area .reset {}
+
+/* 앨범 목록 - 지혜 */
+.albam-list {/* 그리드 갭 넣으셈 */}
+.albam-list .item {/* 이벤트 빼고 생각하셈 */}
