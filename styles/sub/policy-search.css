@@ -1,0 +1,29 @@
+#main {
+    max-width: 95%;
+    margin-inline: auto;
+}
+
+/* 검색필터 */
+.search-filter { text-align: center; }
+.search fieldset{ 
+    height: 50px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 810px;
+    margin: 0 auto;
+}
+.search .text {
+    width: 100%;
+    border: 1px solid #003675;
+    border-radius: 100px;
+}
+.search button {
+    width: 50px;
+    border: 1px solid #5C5C5C;
+    border-radius: 100px;
+}
+.search .detail-toggle {
+    
+}

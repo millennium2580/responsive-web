@@ -8,7 +8,7 @@
 
 /* Reset style */ /* 기본값 초기화 - 여기서만 태그 선택자 허용 */
 * { box-sizing: border-box; }
-body, h1, h2, h3, h4, p, ul, ol, li, button, a { margin: 0; padding: 0; }
+body, h1, h2, h3, h4, p, ul, ol, li, button, a, dd, fieldset { margin: 0; padding: 0; }
 h1, h2, h3, h4 { font-size: inherit; }
 ul, ol { list-style: none; }
 a { text-decoration: none; color: inherit; }
@@ -81,7 +81,9 @@ input {
     color: #333;
 }
 
-button {
+
+/* 메인버튼 / 서브버튼 / 온 오프 버튼 따로 넣어야 할 듯 */
+button { 
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 16px;
