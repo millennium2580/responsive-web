@@ -112,10 +112,10 @@ button:hover {
 }
 
 /* 3. 레이아웃 클래스 (공통 사용) */
-#main { padding: 0 15px; }
+/* #main { padding: 0 15px; } */
 .wrapper { width: 100%; min-width: 320px; }
 .container { width: 100%; }
-.inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; background-color: #ececec; }
+.inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; background-color: #ececec; }
 
 /* 4. 공통 UI 컴포넌트 */
 .img-box { overflow: hidden; }
@@ -142,15 +142,49 @@ button:hover {
     body { 
         font-size: 18px;
     }
+
+    .inner { padding: 0; }
 }
 
 /* 메인 탭 */
 .main-tab {}
 
 /* 서브 탭 - 지혜 */
-.sub-tab {}        
-.sub-tab .prev {}
-.sub-tab .next {}
+.sub-tab {
+    display: flex;
+    align-items: center;    
+}
+
+.sub-tab p {
+
+}
+
+.sub-tab ul { /* 태그명씀 */
+    display: flex;
+    overflow: hidden;
+}
+
+.sub-tab ul li {
+    padding: 10px 30px;
+    width: 50%;
+    border-bottom: 5px solid #E4E7EB;
+}
+
+.sub-tab .tab-on {
+    border-bottom: 5px solid #003675;
+    color: #003675;
+    font-weight: 700;
+}
+
+.sub-tab .prev, .sub-tab .next {
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+}
+
+/* .sub-tab .prev {}
+.sub-tab .next {} */
+
 
 /* 꿀팁 (각 페이지 상단 정보) - 지혜 */
 .cont-info {}
@@ -176,33 +210,23 @@ button:hover {
         width: 40px; 
         height: 40px;
         border-radius: 6px;
-        text-align: center;
-        line-height : 40px
-        
+        padding: 0;
+        color: #333;
+        background-color: transparent;
     }
 
     /* 페이지 번호 온오프 */
-    .page-num-box .num {
-    }
     .page-num-box .num.on {
         background-color: #E1EBFF;
     }
 
     /* 이전 다음 */
-    .page-num-box .prev {
-
-    }
-    .page-num-box .next {
-
-    }
+        /* .page-num-box .prev {}
+        .page-num-box .next {} */
 
     /* 맨앞 맨뒤 */
-    .page-num-box .first {
-
-    }
-    .page-num-box .last {
-
-    }
+        /* .page-num-box .first {}
+        .page-num-box .last {} */
 /* -- */
 
 /* 폼영역 - 지수 */
