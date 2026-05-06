@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container inner">
         <aside id="aside">
             
         </aside><!-- // #aside End -->
@@ -29,21 +29,27 @@
             </dl>
 
             <!-- 목록 검색필터 -->
-            <form class="board-search" action="" method="post">
-                <fieldset>
+            <form>
+                <fieldset class="sub-search-area">
                     <legend class="blind">청년신문고 검색</legend>
+                    
+                    <ul>
+                        <li>
+                            <label class="label">키워드</label>
+                        </li>
+                        <li>
+                            <dl class="select">
+                                <dt>전체<!-- <img src="" alt="펼치기"> --></dt>
+                                <dd>제목</dd>
+                                <dd>내용</dd>
+                            </dl>
+                        </li>
+                        <li class="input-box">
+                            <input type="text" class="input">
+                        </li>
+                    </ul>
 
-                    <label class="label">키워드</label>
-
-                    <dl class="select">
-                        <dt>전체<img src="" alt="펼치기"></dt>
-                        <dd>제목</dd>
-                        <dd>내용</dd>
-                    </dl>
-
-                    <input type="text" class="input">
-
-                    <button type="reset" class="reset">초기화</button>
+                    <button class="reset">초기화</button>
                     <button type="submit" class="submit">검색</button>
                 </fieldset>
             </form>
@@ -62,15 +68,15 @@
                 <table class="table">
                     <caption class="blind">청년신문고 목록</caption>
 
-                    <!-- <thead>
+                    <thead>
                         <tr>
-                            <th>번호</th>
-                            <th>공개여부</th>
-                            <th>제목</th>
-                            <th>등록일</th>
-                            <th>상태</th>
+                            <th scope="col">번호</th>
+                            <th scope="col">공개여부</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">상태</th>
                         </tr>
-                    </thead>  -->
+                    </thead> 
 
                     <tbody>
                         <tr class="item">
@@ -175,17 +181,17 @@
                     </tbody>
                 </table>
 
-                <button class="write">의견 작성하기</button>
+                <button class="write stress-btn">의견 작성하기</button>
 
                 <!-- 페이지번호 -->
                 <p class="page-num-box">
                     <button>맨앞</button>
                     <button>이전</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
+                    <button class="num on">1</button>
+                    <button class="num">2</button>
+                    <button class="num">3</button>
+                    <button class="num">4</button>
+                    <button class="num">5</button>
                     <button>다음</button>
                     <button>맨끝</button>
                 </p>

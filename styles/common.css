@@ -1,4 +1,4 @@
-/* @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css"); */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css");
 
 /* ================================
     [전체 반응형 가이드]
@@ -8,9 +8,9 @@
 
 /* Reset style */ /* 기본값 초기화 - 여기서만 태그 선택자 허용 */
 * { box-sizing: border-box; }
-body, h1, h2, h3, h4, p, ul, ol, li, button, a, dd, fieldset { margin: 0; padding: 0; }
+body, h1, h2, h3, h4, p, ul, ol, li, button, a, dl, dd, fieldset { margin: 0; padding: 0; }
 h1, h2, h3, h4 { font-size: inherit; }
-ul, ol { list-style: none; }
+ul, ol, li { list-style: none; }
 a { text-decoration: none; color: inherit; }
 button { border: 0; background: transparent; cursor: pointer; }
 img { vertical-align: top; max-width: 100%; }
@@ -20,12 +20,14 @@ input, button, select, textarea {
     border: 0 none;
     background: none;
     font-family: inherit; /* 필수: 부모 폰트 상속 */
-    appearance: none;  /* 필수: 기기별 기본 스타일 제거 */
 }
+button, select, textarea {appearance: none; /* 필수: 기기별 기본 스타일 제거 */}
 
 input:focus, button:focus {
     outline: none;
 }
+
+#aside { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
 
 /* common.css 에 추가해주세요 */
 /* reset */
@@ -47,7 +49,7 @@ th, td {
 /* 2. Base (기본 레이아웃 및 폰트) */
 body { 
     font-size: 16px; color: #333; line-height: 1.6;
-    font-family: 'Pretendard GOV, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
+    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 h1 {
     font-size: 32px;
@@ -69,10 +71,11 @@ h3 {
     color: #111;
 }
 
-a { color:#1D56BC; line-height: 1.4; font-size: 15px; }
-.txt-link { color:#1d1d1d; }
-a:hover { color:#1D56BC; text-decoration: underline; }
-.txt-link:hover { color:#1d1d1d; }
+
+.txt-link { color:#1D56BC; line-height: 1.4; font-size: 15px; }
+.txt-link:hover { color:#1D56BC; text-decoration: underline; }
+a { color:#1d1d1d; }
+a:hover { color:#1d1d1d; }
 
 input {
     width: 100%;
@@ -90,17 +93,8 @@ img {width: 100%; height: 100%; object-fit: cover; align-items: center;}
 
 /* 메인버튼 / 서브버튼 / 온 오프 버튼 따로 넣어야 할 듯 */
 button { 
-    padding: 10px 20px;
     border-radius: 4px;
-    font-size: 16px;
     cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
 }
 
 /* 폰트 */
@@ -115,7 +109,7 @@ button:hover {
 /* #main { padding: 0 15px; } */
 .wrapper { width: 100%; min-width: 320px; }
 .container { width: 100%; }
-.inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px; background-color: #ececec; }
+.inner { width: 100%; min-width: 360px; max-width: 1200px; margin: 0 auto; padding: 0 15px; background-color: #fff; }
 
 /* 4. 공통 UI 컴포넌트 */
 .img-box { overflow: hidden; }
@@ -134,29 +128,15 @@ button:hover {
     min-width: 320px;
 }
 
-@media screen and (max-width: 767px){
-    .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
-}
-
-@media screen and (min-width: 1024px){ /* 데스크탑 min-width가 다를 수 있음 */
-    body { 
-        font-size: 18px;
-    }
-
-    .inner { padding: 0; }
-}
 
 /* 메인 탭 */
 .main-tab {}
 
-/* 서브 탭 - 지혜 */
+/* 서브 탭 - 다슬 */
 .sub-tab {
-    display: flex;
-    align-items: center;    
-}
-
-.sub-tab p {
-
+    position: relative;
+    padding: 0 30px;  
+    margin-bottom: 32px;
 }
 
 .sub-tab ul { /* 태그명씀 */
@@ -165,38 +145,106 @@ button:hover {
 }
 
 .sub-tab ul li {
-    padding: 10px 30px;
-    width: 50%;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
     border-bottom: 5px solid #E4E7EB;
 }
 
-.sub-tab .tab-on {
-    border-bottom: 5px solid #003675;
-    color: #003675;
-    font-weight: 700;
+.sub-tab ul li a { font-weight: 700; color:#666;}
+
+.sub-tab ul li:hover::after {
+  transform: scaleX(1); /* 호버 시 나타남 */
 }
 
-.sub-tab .prev, .sub-tab .next {
-    border-radius: 100%;
-    width: 32px;
-    height: 32px;
+.sub-tab .on { border-bottom: 5px solid #003675; }
+.sub-tab .on a {color: #003675;}
+
+.sub-tab .prev {position: absolute; left: 0; top: 10px }
+.sub-tab .next {position: absolute; right: 0; top: 10px;}
+
+@media (min-width:360px){
+    .sub-tab ul .list { width: 50% }
 }
 
-/* .sub-tab .prev {}
-.sub-tab .next {} */
+@media (min-width:650px){
+    .sub-tab ul .list { width: 33.33% }
+}
 
+@media (min-width:1280px){
+    .sub-tab ul .list { width: 25% }
+}
 
 /* 꿀팁 (각 페이지 상단 정보) - 지혜 */
-.cont-info {}
+/* 왼쪽 배경이미지로 아이콘 - 모바일 버전 생각해보기 뒤에.. */
+.cont-info {
+    padding: 140px 36px 40px 40px;
+    background-color: #F0F0F0;
+    margin-bottom: 64px;
+    border-radius: 10px;
+}
 
 /* 서브페이지 맨 위 네비 - 윤진 */
-.sub-nav {}
+.sub-nav {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.sub-nav a {
+    text-decoration: underline; /*글자 아래 밑줄*/
+    text-underline-offset: 5px; /* 글자와 밑줄 사이의 간격 */
+    color: #1D1D1D;
+}
+a:hover{
+    text-decoration: none;
+}
+.sub-nav li:last-child {
+    font-weight: bold;
+}
 
 /* 버튼 - 윤진 */
+    /* 강조색버튼 */
+    .stress-btn { 
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        border-radius: 8px;
+        background-color: #003675;
+        color: #fff;
+    }
+
     /* 메인버튼 */
-    .main-btn {}
+    .main-btn {
+        width: 124px;
+        height: 40px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background-color: #246BE0;
+        color: #fff;
+    }
+    .main-btn:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+    .main-btn a { color: #fff; }
     /* 서브버튼 */
-    .sub-btn {}
+    .sub-btn {
+        width: 100px;
+        height: 40px;
+        padding: 0px 8px;
+        border-radius: 8px;
+        background-color: #EFF5FF;
+        color: #246BE0;
+        border: 1px solid #246BE0;
+    }
+
+    .sub-btn:hover {
+        text-decoration: underline;
+        color: #246BE0;
+    }
 /* -- */
 
 /* 페이지 번호 - 다슬 */
@@ -219,25 +267,182 @@ button:hover {
     .page-num-box .num.on {
         background-color: #E1EBFF;
     }
-
-    /* 이전 다음 */
-        /* .page-num-box .prev {}
-        .page-num-box .next {} */
-
-    /* 맨앞 맨뒤 */
-        /* .page-num-box .first {}
-        .page-num-box .last {} */
 /* -- */
 
 /* 폼영역 - 지수 */
-.sub-search-area{}
+.sub-search-area {
+    text-align: center;
+    padding: 32px 24px;
+    margin: 0 0 40px;
+    border-radius: 15px;
+    border: 1px solid #D9D9D9;
+    background-color: #f8f8f8;
+}
 
-.sub-search-area .keyword {}
-.sub-search-area .input {}
+.sub-search-area ul {
+    display: flex; 
+    gap: 6px;
+}
+.sub-search-area li {flex-shrink: 0; text-align: left;}
+.sub-search-area .input-box {flex: 1; width: 100%;}
+.sub-search-area .select{
+    width: 100%;
+    text-align: left;
+    padding: 4px 32px 4px 12px;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    background-color: white;
+}
 
-.sub-search-area .submit {}
-.sub-search-area .reset {}
+.sub-search-area .keyword {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 32px 0 12px;
+    border-radius: 8px;
+    border: 1px solid #D9D9D9;
+    background-color: white;
+}
+.sub-search-area input {
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #D9D9D9;
+    background-color: white;
+    font-size: 15px;
+}
+.sub-search-area span {
+    height: 36px;
+    line-height: 36px;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+.sub-search-area dd { display: none; } /* 태그 변경 */
+.sub-search-area button { margin-top: 20px; }
+
+.sub-search-area .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-search-area .submit {
+    width: 100px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #5C5C5C;
+    color: #fff;
+}
+.sub-search-area .reset {
+    width: 100px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #D5DAE1;
+    background-color: #fff;
+    color: #1d1d1d;
+}
 
 /* 앨범 목록 - 지혜 */
-.albam-list {/* 그리드 갭 넣으셈 */}
-.albam-list .item {/* 이벤트 빼고 생각하셈 */}
+.album-list {
+    /* 그리드 갭 넣으셈 */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}
+.album-list .item {
+    /* 이벤트 빼고 생각하셈 */
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+}
+
+/* 모바일~테블릿 */
+@media screen and (max-width: 650px){
+    .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+    .sub-search-area ul { flex-direction: column; }
+}
+
+/* 테블릿~데스크탑 */
+@media screen and (min-width: 650px){
+    /* 꿀팁 정보 영역 */
+    .cont-info {
+        padding: 40px 36px 40px 140px;
+    }
+
+    .album-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sub-search-area ul {
+        align-items: center; 
+        justify-content: center; 
+    }
+    .sub-search-area .select{ width: 130px; }
+    .sub-search-area .input-box {flex: 1; max-width: 500px;}
+
+}
+/* 데스크탑 */
+@media screen and (min-width: 1280px){ /* 데스크탑 min-width가 다를 수 있음 */
+    body { 
+        font-size: 18px;
+    }
+
+    .inner { padding: 0; }
+
+    /* 사이드/메인 레이아웃 */
+    .container {
+        display: flex;
+    }
+
+    /* 크기만 #aside가 잡고(inner와 같은 역할) 디자인은 안에 박스에서 */
+    #aside {
+        width: 292px;
+        position: static;
+        overflow: visible;
+    }
+
+    .aside-wrap {
+        background-color: #fff;
+        border-radius: 10px;
+        /* border: 1px solid black; */
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    #main {
+        padding-left: 40px;
+        flex: 1;
+    }
+
+    #aside h1 {
+        padding: 65px 0;
+        text-align: center;
+        background-image: linear-gradient(to left, #FEE4FF, #E1EBFF);
+        border-radius: 10px 10px 0 0 ;
+        color: #333;
+        margin: 0;
+    }
+
+    #aside ul {
+        padding: 24px;
+        font-weight: 700;
+    }
+
+    #aside ul li {
+        padding: 18px 8px;
+        font-size: 17px;
+        /* background-color: beige; */
+        border-bottom: 1px solid #D0D5DD;
+    }
+
+    #aside ul .on {
+        color: #003675; /* 비활성화/활성화 상단에서 수정 */
+        border-bottom: 3px solid #003675;
+    }
+
+    #aside li:hover {
+        background-color: #E1EBFF;
+    }
+
+    .album-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

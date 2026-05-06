@@ -28,8 +28,8 @@
                             <legend class="blind">청년정책 상세검색</legend> <!-- 제목 필수 -->
         
                             <input type="text" class="text">
-                            <button class="search-submit"><img src="" alt="검색"></button>
-                            <button class="search-reset"><img src="" alt="초기화"></button>
+                            <button class="submit"><img src="" alt="검색"></button>
+                            <button class="reset"><img src="" alt="초기화"></button>
                         </div>
     
                         <button class="detail">상세검색 열기</button>
@@ -50,8 +50,8 @@
     
                 <!-- 위치필터 -->
                 <div class="region">
+                    <p><button>전체</button></p>
                     <ul>
-                        <li><button>전체</button></li>
                         <li><button>중앙부처</button></li>
                         <li><button>서울</button></li>
                         <li><button>부산</button></li>
@@ -90,26 +90,30 @@
                         <p>비교할 정책을 선택해 주세요</p>
                     </li>
                 </ul>
-                <button class="btn">정책 비교하기</button>
+                <button class="btn main-btn">정책 비교하기</button>
             </div>
                 
             <div class="policy-list">
                 <!-- 목록 필터 -->
                 <div class="list-filter">
                     <span>총 2,316건</span>
-                    <label>
-                        <input type="checkbox">
-                        마감제외
-                        <span class="deadline-toggle"></span>
-                    </label>
+                    <div class="filter">
+                        <label>
+                            <input type="checkbox">
+                            마감제외
+                            <span class="toggle"></span>
+                        </label>
+                    </div>
                 </div>
                 <!-- 정책 목록 -->
                 <ul class="card-list">
                     <li class="card">
                         <ul class="top">
+                            <label class="compare-check">
+                                <input type="checkbox">
+                                정책비교
+                            </label>
                             <li><strong class="state">마감</strong></li>
-                            <li><button type="button" class="share">공유</button></li>
-                            <li><button type="button" class="scrap">스크랩</button></li>
                         </ul>
 
                         <div class="meta">
@@ -117,11 +121,6 @@
                                 <li class="type">참여·기반</li>
                                 <li class="agency">광주시청</li>
                             </ul>
-
-                            <label class="compare-check">
-                                <input type="checkbox">
-                                정책비교
-                            </label>
                         </div>
 
                         <dl class="info">
@@ -146,18 +145,24 @@
                             </dd>
                         </dl>
 
-                        <a href="" class="detail">자세히보기</a>
+                        <a href="" class="detail sub-btn sub-btn">자세히보기</a>
 
                         <ul class="tag">
                             <li>#보조금</li>
                             <li>#장기미취업청년</li>
                         </ul>
+                        <div class="btns">
+                            <button class="share">공유</button>
+                            <button class="scrap">스크랩</button>
+                        </div>
                     </li> 
                     <li class="card">
                         <ul class="top">
+                            <label class="compare-check">
+                                <input type="checkbox">
+                                정책비교
+                            </label>
                             <li><strong class="state">마감</strong></li>
-                            <li><button type="button" class="share">공유</button></li>
-                            <li><button type="button" class="scrap">스크랩</button></li>
                         </ul>
 
                         <div class="meta">
@@ -166,10 +171,7 @@
                                 <li class="agency">광주시청</li>
                             </ul>
 
-                            <label class="compare-check">
-                                <input type="checkbox">
-                                정책비교
-                            </label>
+                            
                         </div>
 
                         <dl class="info">
@@ -185,17 +187,23 @@
                             </dd>
                         </dl>
 
-                        <a href="" class="detail">자세히보기</a>
+                        <a href="" class="detail sub-btn">자세히보기</a>
 
                         <ul class="tag">
                             <li>#인턴</li>
                         </ul>
+                        <div class="btns">
+                            <button class="share">공유</button>
+                            <button class="scrap">스크랩</button>
+                        </div>
                     </li> 
                     <li class="card">
                         <ul class="top">
+                            <label class="compare-check">
+                                <input type="checkbox">
+                                정책비교
+                            </label>
                             <li><strong class="state">마감</strong></li>
-                            <li><button type="button" class="share">공유</button></li>
-                            <li><button type="button" class="scrap">스크랩</button></li>
                         </ul>
 
                         <div class="meta">
@@ -204,10 +212,7 @@
                                 <li class="agency">광주시청</li>
                             </ul>
 
-                            <label class="compare-check">
-                                <input type="checkbox">
-                                정책비교
-                            </label>
+                            
                         </div>
 
                         <dl class="info">
@@ -222,18 +227,24 @@
                             </dd>
                         </dl>
 
-                        <a href="" class="detail">자세히보기</a>
+                        <a href="" class="detail sub-btn">자세히보기</a>
 
                         <ul class="tag">
                             <li>#보조금</li>
                             <li>#장기미취업청년</li>
                         </ul>
+                        <div class="btns">
+                            <button class="share">공유</button>
+                            <button class="scrap">스크랩</button>
+                        </div>
                     </li> 
                     <li class="card">
                         <ul class="top">
+                            <label class="compare-check">
+                                <input type="checkbox">
+                                정책비교
+                            </label>
                             <li><strong class="state">마감</strong></li>
-                            <li><button type="button" class="share">공유</button></li>
-                            <li><button type="button" class="scrap">스크랩</button></li>
                         </ul>
 
                         <div class="meta">
@@ -242,10 +253,7 @@
                                 <li class="agency">광주시청</li>
                             </ul>
 
-                            <label class="compare-check">
-                                <input type="checkbox">
-                                정책비교
-                            </label>
+                            
                         </div>
 
                         <dl class="info">
@@ -261,17 +269,23 @@
                             </dd>
                         </dl>
 
-                        <a href="" class="detail">자세히보기</a>
+                        <a href="" class="detail sub-btn">자세히보기</a>
 
                         <ul class="tag">
                             <li>#인턴</li>
                         </ul>
+                        <div class="btns">
+                            <button class="share">공유</button>
+                            <button class="scrap">스크랩</button>
+                        </div>
                     </li> 
                     <li class="card">
                         <ul class="top">
+                            <label class="compare-check">
+                                <input type="checkbox">
+                                정책비교
+                            </label>
                             <li><strong class="state">마감</strong></li>
-                            <li><button type="button" class="share">공유</button></li>
-                            <li><button type="button" class="scrap">스크랩</button></li>
                         </ul>
 
                         <div class="meta">
@@ -280,10 +294,7 @@
                                 <li class="agency">광주시청</li>
                             </ul>
 
-                            <label class="compare-check">
-                                <input type="checkbox">
-                                정책비교
-                            </label>
+                            
                         </div>
 
                         <dl class="info">
@@ -298,24 +309,28 @@
                             </dd>
                         </dl>
 
-                        <a href="" class="detail">자세히보기</a>
+                        <a href="" class="detail sub-btn">자세히보기</a>
 
                         <ul class="tag">
                             <li>#보조금</li>
                         </ul>
+                        <div class="btns">
+                            <button class="share">공유</button>
+                            <button class="scrap">스크랩</button>
+                        </div>
                     </li> 
                 </ul>
                 <!-- 페이지번호 -->
                 <p class="page-num-box">
-                    <button class="first">맨앞</button>
-                    <button class="prev">이전</button>
-                    <button class="num">1</button>
+                    <button>맨앞</button>
+                    <button>이전</button>
+                    <button class="num on">1</button>
                     <button class="num">2</button>
                     <button class="num">3</button>
                     <button class="num">4</button>
                     <button class="num">5</button>
-                    <button class="next">다음</button>
-                    <button class="last">맨끝</button>
+                    <button>다음</button>
+                    <button>맨끝</button>
                 </p>
             <!-- div "policy-list" -->
             </div>

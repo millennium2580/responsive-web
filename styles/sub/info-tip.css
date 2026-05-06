@@ -1,11 +1,3 @@
-#main {
-    max-width: 95%;
-    margin-inline: auto;
-}
-h1 {
-    margin: 0 0 48px 0;
-}
-
 /* 페이지 정보 */
 .cont-info {
     padding: 40px 36px 40px 140px;
@@ -15,7 +7,7 @@ h1 {
 }
 
 /* 검색 영역 */
-.tip-search fieldset{
+/* .tip-search fieldset{
     padding: 32px 24px;
     margin-bottom: 40px;
     text-align: center;
@@ -49,4 +41,89 @@ h1 {
     padding: 8px 12px;
     color: white;
     background-color: #5C5C5C;
+} */
+
+/* 청년꿀팁 목록 */
+.album-list {
+    display: grid;
+    gap: 15px;
+}
+
+.album-list .item {
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* 이미지 영역 */
+.album-list .img-mask {
+    width: calc(100% + 40px);
+    margin: -20px;
+    aspect-ratio: 16 / 9;
+    background-color: #5C5C5C;
+}
+
+.album-list .img-mask img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 카드 내용 영역 */
+.album-list .top,
+.album-list .info {
+    padding-inline: 20px;
+}
+
+.album-list .top {
+    position: relative;
+    margin: 20px 0;
+    padding-top: 20px;
+}
+.album-list .top .cate {
+    border: 1px solid #c6c6c6;
+    padding: 0 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.album-list .top .share {
+    width: 20px; height: 20px;
+    border-radius: 100%;
+    background-color: #5C5C5C;
+    position: absolute; top: 50%; right: 20px;
+}
+
+
+.album-list .info {
+    padding-bottom: 20px;
+}
+
+.album-list .tit {
+    margin-bottom: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 모바일 */
+@media screen and (max-width: 480px) {
+    .album-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* 태블릿 */
+@media screen and (min-width: 480px) {
+    .album-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 데스크탑 */
+@media screen and (min-width: 880px) {
+    .album-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

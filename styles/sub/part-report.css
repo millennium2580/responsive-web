@@ -1,0 +1,273 @@
+/* 페이지 정보 */
+.cont-info dt {
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* 목록 상단 필터 */
+.board-list {
+    position: relative;
+}
+
+.board-list .filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.board-list .filter label {
+    position: relative;
+    padding-right: 52px;
+    font-size: 15px;
+}
+
+.board-list .filter input {
+    position: absolute;
+    opacity: 0;
+}
+
+.board-list .toggle {
+    position: absolute; top: 50%; right: 0;
+    transform: translateY(-50%);
+    width: 42px; height: 24px;
+    border-radius: 100px;
+    background-color: #D0D5DD;
+}
+
+.board-list .toggle::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.board-list .filter input:checked + .toggle {
+    background-color: #003675;
+}
+
+.board-list .filter input:checked + .toggle::after {
+    left: 22px;
+}
+
+/* 신문고 목록 테이블 */
+.table {
+    table-layout: fixed;
+    border-top: 2px solid #111;
+}
+
+/* 데스크탑 테이블 헤더 */
+.table thead {
+    background-color: #F8F9FB;
+}
+
+.table th {
+    padding: 16px 12px;
+    border-bottom: 1px solid #D9D9D9;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.table th:nth-child(1) {
+    width: 80px;
+}
+
+.table th:nth-child(2) {
+    width: 90px;
+}
+
+.table th:nth-child(4) {
+    width: 130px;
+}
+
+.table th:nth-child(5) {
+    width: 110px;
+}
+
+/* 테이블 바디 */
+.table .item {
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.table td {
+    padding: 22px 12px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.table .num {
+    text-align: center;
+}
+
+.table .lock {
+    text-align: center;
+}
+
+.table .lock img {
+    width: 20px;
+    height: 20px;
+}
+
+.table .tit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table .date {
+    text-align: center;
+}
+
+.table .state {
+    text-align: center;
+}
+
+.table .state strong {
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #246BE0;
+    border: 1px solid #246BE0;
+    background-color: #EFF5FF;
+}
+
+/* 모바일에서만 보일 라벨 */
+.table .label {
+    display: none;
+}
+
+/* 의견 작성 버튼 */
+.write {
+    display: block;
+    margin: 16px 0 0 auto;
+}
+
+/* 반응형 */
+/* 모바일 */
+@media screen and (max-width: 480px) {
+    .album-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* 태블릿 */
+@media screen and (max-width: 880px) {
+    .album-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .board-search fieldset {
+        display: block;
+    }
+
+    .board-search .label,
+    .board-search .select,
+    .board-search .input {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .board-search button {
+        width: calc(50% - 4px);
+    }
+
+    .board-search .reset {
+        margin-right: 4px;
+    }
+
+    .board-search .submit {
+        margin-left: 4px;
+    }
+
+    /* 모바일에서는 테이블 헤더 숨김 */
+    .table thead {
+        display: none;
+    }
+
+    .table {
+        border-top: 0;
+        border-top: 2px solid #111;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table .item {
+        padding: 20px;
+        margin-bottom: 8px;
+    }
+    .table .item span {
+        width: 56px;
+    }
+
+    .table td {
+        padding: 0;
+        font-size: 15px;
+    }
+
+    .table .num {
+        text-align: left;
+        margin-bottom: 8px;
+    }
+
+    .table .lock {
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .table .lock img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .table .tit {
+        margin-bottom: 8px;
+        white-space: normal;
+
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .table .date,
+    .table .state {
+        text-align: left;
+    }
+
+    .table .date {
+        margin-bottom: 8px;
+    }
+
+    .table .label {
+        display: inline-block;
+        margin-right: 8px;
+        font-weight: 700;
+    }
+
+    .write {
+        width: 100%;
+    }
+}
+
+/* 데스크탑 */
+@media screen and (min-width: 880px) {
+    .album-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
