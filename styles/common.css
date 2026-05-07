@@ -7,7 +7,7 @@
 ================================ */
 
 /* Reset style */ /* 기본값 초기화 - 여기서만 태그 선택자 허용 */
-* { box-sizing: border-box; }
+* { box-sizing: border-box; word-break: keep-all; }
 body, h1, h2, h3, h4, p, ul, ol, li, button, a, dl, dd, fieldset { margin: 0; padding: 0; }
 h1, h2, h3, h4 { font-size: inherit; }
 ul, ol, li { list-style: none; }
@@ -50,6 +50,7 @@ th, td {
 body { 
     font-size: 16px; color: #333; line-height: 1.6;
     font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    
 }
 h1 {
     font-size: 32px;
@@ -184,6 +185,17 @@ button {
     background-color: #F0F0F0;
     margin-bottom: 64px;
     border-radius: 10px;
+}
+
+.cont-info dt {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cont-info dd {
+    font-size: 17px;
+    color: #555;
 }
 
 /* 서브페이지 맨 위 네비 - 윤진 */
@@ -434,8 +446,11 @@ a:hover{
     }
 
     #aside ul .on {
-        color: #003675; /* 비활성화/활성화 상단에서 수정 */
         border-bottom: 3px solid #003675;
+    }
+
+    #aside ul .on a {
+        color: #003675; /* 비활성화/활성화 상단에서 수정? */
     }
 
     #aside li:hover {
