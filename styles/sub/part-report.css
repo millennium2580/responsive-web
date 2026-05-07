@@ -11,21 +11,42 @@
     position: relative;
 }
 
-.board-list .filter {
+.list-filter {display: flex;}
+.list-filter .filter {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 16px;
+    margin-left: auto;
 }
 
-.board-list .filter label {
+.list-filter .filter label {
     position: relative;
     padding-right: 52px;
     font-size: 15px;
 }
 
-.board-list .filter input {
+.list-filter .filter input {
     position: absolute;
     opacity: 0;
+}
+
+.list-filter .toggle {
+    position: absolute; top: 50%; right: 0;
+    transform: translateY(-50%);
+    width: 42px; height: 24px;
+    border-radius: 100px;
+    background-color: #D0D5DD;
+}
+.list-filter .toggle::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .board-list .toggle {
@@ -181,6 +202,10 @@
 
     .board-search .submit {
         margin-left: 4px;
+    }
+    
+    .list-filter label {
+        display: block;
     }
 }
 

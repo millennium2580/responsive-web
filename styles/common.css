@@ -136,7 +136,7 @@ button {
 /* 서브 탭 - 다슬 */
 .sub-tab {
     position: relative;
-    padding: 0 30px;  
+    padding: 0 50px;  
     margin-bottom: 32px;
 }
 
@@ -176,6 +176,7 @@ button {
 
 @media (min-width:1280px){
     .sub-tab ul .list { width: 25% }
+    .sub-tab .prev, .sub-tab .next {display: none;}
 }
 
 /* 꿀팁 (각 페이지 상단 정보) - 지혜 */
