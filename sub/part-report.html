@@ -46,26 +46,25 @@
             <!-- 목록 검색필터 -->
             <form>
                 <fieldset class="sub-search-area">
-                    <legend class="blind">청년신문고 검색</legend>
-                    
-                    <ul>
-                        <li>
-                            <label class="label">키워드</label>
-                        </li>
-                        <li>
-                            <dl class="select">
-                                <dt>전체<!-- <img src="" alt="펼치기"> --></dt>
-                                <dd>제목</dd>
-                                <dd>내용</dd>
-                            </dl>
-                        </li>
-                        <li class="input-box">
-                            <input type="text" class="input">
-                        </li>
-                    </ul>
-
-                    <button class="reset">초기화</button>
-                    <button type="submit" class="submit">검색</button>
+                    <legend class="blind"> 청년신문고 검색 </legend>
+                    <div class="keyword">
+                        <dl>
+                            <dt>키워드</dt>
+                            <dd class="select">
+                                <p>전체 <!-- img src="" alt="펼치기" --></p>
+                                <ul>
+                                    <li>전체</li>
+                                    <li>제목</li>
+                                    <li>내용</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <input type="text" class="input" placeholder="검색어를 입력해주세요">
+                    </div>
+                    <p class="btn">
+                        <button type="reset" class="reset">초기화</button>
+                        <button type="submit" class="submit">검색</button>
+                    </p>
                 </fieldset>
             </form>
 

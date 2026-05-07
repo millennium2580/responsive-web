@@ -7,7 +7,7 @@
 ================================ */
 
 /* Reset style */ /* 기본값 초기화 - 여기서만 태그 선택자 허용 */
-* { box-sizing: border-box; word-break: keep-all; }
+* { box-sizing: border-box; word-break: keep-all;}
 body, h1, h2, h3, h4, p, ul, ol, li, button, a, dl, dd, fieldset { margin: 0; padding: 0; }
 h1, h2, h3, h4 { font-size: inherit; }
 ul, ol, li { list-style: none; }
@@ -176,7 +176,7 @@ button {
 
 @media (min-width:1280px){
     .sub-tab ul .list { width: 25% }
-    .sub-tab .prev, .sub-tab .next {display: none;}
+    .sub-tab .prev, .sub-tab .next { display: none; }
 }
 
 /* 꿀팁 (각 페이지 상단 정보) - 지혜 */
@@ -282,39 +282,43 @@ a:hover{
     }
 /* -- */
 
-/* 폼영역 - 다슬 */
+/* 폼영역 - 지수 */
 .sub-search-area {
-    text-align: center;
     padding: 32px 24px;
     margin: 0 0 40px;
     border-radius: 15px;
     border: 1px solid #D9D9D9;
     background-color: #f8f8f8;
+    font-size: 16px;
 }
 
-.sub-search-area ul {
-    display: flex; 
-    gap: 6px;
+.sub-search-area dt {
+    margin-bottom: 4px;
+    font-size: 15px;
+    font-weight: 700;
 }
-.sub-search-area li {flex-shrink: 0; text-align: left;}
-.sub-search-area .input-box {flex: 1; width: 100%;}
-.sub-search-area .select{
+
+.sub-search-area .select ul {
+    display: none;
+    position: absolute; top: 0px; left: 0px;
     width: 100%;
-    text-align: left;
     padding: 4px 32px 4px 12px;
-    border: 1px solid #D0D5DD;
+    border: 1px solid #D9D9D9;
     border-radius: 8px;
+    z-index: 1;
     background-color: white;
 }
 
-.sub-search-area .keyword {
+.sub-search-area .select {
+    position: relative;
     height: 36px;
-    line-height: 36px;
-    padding: 0 32px 0 12px;
     border-radius: 8px;
     border: 1px solid #D9D9D9;
     background-color: white;
+    padding: 4px 32px 4px 12px;
+    margin-bottom: 4px;
 }
+
 .sub-search-area input {
     height: 36px;
     border-radius: 8px;
@@ -322,20 +326,12 @@ a:hover{
     background-color: white;
     font-size: 15px;
 }
-.sub-search-area span {
-    height: 36px;
-    line-height: 36px;
-    font-size: 15px;
-    flex-shrink: 0;
-}
-.sub-search-area dd { display: none; } /* 태그 변경 */
-.sub-search-area button { margin-top: 20px; }
 
 .sub-search-area .btn {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    gap: 8px;
+    margin-top: 15px;
 }
 
 .sub-search-area .submit {
@@ -371,7 +367,6 @@ a:hover{
 /* 모바일~테블릿 */
 @media screen and (max-width: 650px){
     .blind-m { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
-    .sub-search-area ul { flex-direction: column; }
 }
 
 /* 테블릿~데스크탑 */
@@ -385,12 +380,26 @@ a:hover{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .sub-search-area ul {
-        align-items: center; 
-        justify-content: center; 
+    .sub-search-area .keyword {
+        padding: 0 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .sub-search-area .select{ width: 130px; }
-    .sub-search-area .input-box {flex: 1; max-width: 500px;}
+
+    .sub-search-area .keyword dl dt { margin: 0; }
+    .sub-search-area .keyword dl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-search-area .keyword input { margin: auto; }
+
+    .sub-search-area .keyword .select {
+        width: 116px;
+        margin: 0 8px;
+    }
 
 }
 /* 데스크탑 */
