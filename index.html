@@ -6,100 +6,110 @@
     <title>페이지 제목 | 사이트명</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard.css">
     <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/서브페이지명.css">
-    <script src="scripts/sub/서브페이지명.js" defer></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <aside id="aside">
-            <h1>로고</h1>
-            <nav>
-                <h2 class="blind"></h2>
-                <ul>
-                    <li>청년정책</li>
-                    <li>청년소식</li>
-                    <li>청년상담</li>
-                    <li>센터·DB</li>
-                    <li>신문고·투표</li>
-                    <li>정책위원회</li>
-                    <li>소개</li>
-                </ul>
-                <div>
-                    <div>
-                        <h3 class="blind">청년정책</h3>
-                        <ul>
-                            <li>정책소개</li>
-                            <li>통합검색</li>
-                            <li>정책바로가기</li>
-                            <li>국·내외 일경험</li>
-                            <li>기본계획</li>
-                            <li>시행계획</li>
-                            <li>청년법령</li>
-                            <li>연구자료</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="blind">청년소식</h3>
-                        <ul>
-                            <li>청년꿀팁</li>
-                            <li>인터뷰</li>
-                            <li>참여프로그램</li>
-                            <li>정책채널</li>
-                            <li>이벤트</li>
-                            <li>보도자료</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="blind">청년상담</h3>
-                        <ul>
-                            <li>상담실 소개</li>
-                            <li>심층상담</li>
-                            <li>찾아가는 상담</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="blind">센터·DB</h3>
-                        <ul>
-                            <li>청년센터</li>
-                            <li>전국 플랫폼</li>
-                            <li>인재DB <!-- <img src="#" alt="외부링크아이콘" class="icon"> --> </li>
-                            <li>국·내외 일경험</li>
-                            <li>기본계획</li>
-                            <li>시행계획</li>
-                            <li>청년법령</li>
-                            <li>연구자료</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="blind">신문고·투표</h3>
-                        <ul>
-                            <li>청년신문고</li>
-                            <li>온라인투표</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="blind">정책위원회</h3>
-                        <ul>
-                            <li>위원회 소개</li>
-                            <li>위원회 구성</li>
-                            <li>개최현황</li>
-                            <li>사무국</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="blind">소개</h3>
-                        <ul>
-                            <li>온통청년 소개</li>
-                            <li>공지사항</li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </aside><!-- // #aside End -->
-        <section id="main">
-            
-        </section><!-- // #main End -->
-    </div><!-- // .container End -->
+    <header id="header">
 
+        <!-- 로고 -->
+        <div class="header-inner">
+            <h1 class="logo"><a href="#"><img src="" alt="온통청년"></a></h1>
+            <div class="header-util">
+                <!-- 검색 -->
+                <div class="header-search">
+                    <!-- 열린 상태에서 보이는 검색 입력창 -->
+                    <form class="search-form" action="" method="get">
+                        <label for="headerSearch" class="blind">통합검색</label>
+                        <input type="text" id="headerSearch" name="keyword" placeholder="통합검색">
+                    </form>
+    
+                    <!-- 입력창 활성화 하는 아이콘 + 활성화 후 꾸밈용 이미지 -->
+                    <button type="button" class="search-open">
+                        <img src="#" alt="통합검색 열기">
+                    </button>
+                </div>
+                <!-- 로그인 -->
+                <a href="#" class="login">
+                    <img src="#" alt="로그인">
+                </a>
+            </div>
+        </div>
+
+        <!-- GNB -->
+        <nav class="gnb">
+            <h2 class="blind">주메뉴</h2>
+            <ul class="gnb-list">
+                <li class="main">
+                    <a href="#">청년정책</a>
+                    <ul class="sub">
+                        <li><a href="#">정책소개</a></li>
+                        <li><a href="#">통합검색</a></li>
+                        <li><a href="#">정책바로가기</a></li>
+                        <li><a href="#">국·내외 일경험</a></li>
+                        <li><a href="#">기본계획</a></li>
+                        <li><a href="#">시행계획</a></li>
+                        <li><a href="#">청년법령</a></li>
+                        <li><a href="#">연구자료</a></li>
+                    </ul>
+                </li>
+                <li class="main">
+                    <a href="#">청년소식</a>
+                    <ul class="sub">
+                        <li><a href="#">청년꿀팁</a></li>
+                        <li><a href="#">인터뷰</a></li>
+                        <li><a href="#">참여프로그램</a></li>
+                        <li><a href="#">정책채널</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">보도자료</a></li>
+                    </ul>
+                </li>
+                <li class="main">
+                    <a href="#">청년상담</a>
+                    <ul class="sub">
+                        <li><a href="#">상담실 소개</a></li>
+                        <li><a href="#">심층상담</a></li>
+                        <li><a href="#">찾아가는 상담</a></li>
+                    </ul>
+                </li>
+                <li class="main">
+                    <a href="#">센터·DB</a>
+                    <ul class="sub">
+                        <li><a href="#">청년센터</a></li>
+                        <li><a href="#">전국 플랫폼</a></li>
+                        <li><a href="#">인재DB <!-- <img src="#" alt="외부링크아이콘" class="icon"> --> </a></li>
+                        <li><a href="#">국·내외 일경험</a></li>
+                        <li><a href="#">기본계획</a></li>
+                        <li><a href="#">시행계획</a></li>
+                        <li><a href="#">청년법령</a></li>
+                        <li><a href="#">연구자료</a></li>
+                    </ul>
+                </li>
+                <li class="main">
+                    <a href="#">신문고·투표</a>
+                    <ul class="sub">
+                        <li><a href="#">청년신문고</a></li>
+                        <li><a href="#">온라인투표</a></li>
+                    </ul>
+                </li>
+                <li class="main">
+                    <a href="#">정책위원회</a>
+                    <ul class="sub">
+                        <li><a href="#">위원회 소개</a></li>
+                        <li><a href="#">위원회 구성</a></li>
+                        <li><a href="#">개최현황</a></li>
+                        <li><a href="#">사무국</a></li>
+                    </ul>
+                </li>
+                <li class="main">
+                    <a href="#">소개</a>
+                    <ul class="sub">
+                        <li><a href="#">온통청년 소개</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
