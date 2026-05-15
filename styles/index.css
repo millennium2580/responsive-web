@@ -1,205 +1,289 @@
 /* reset */
-h1 { margin-bottom: 0; }
-body {min-width: 360px;}
+* {
+    box-sizing: border-box;
+}
 
-/* test */
-/* .icon-l {
-    background-color: #3f7cff;
-} */
+h1 {
+    margin-bottom: 0;
+}
 
-/* 로고 / 검색 / 로그인 */
-    #header {
-        padding: 0 15px;
-    }
-    .header-inner {
-        display: flex;
-        gap: 40px;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 0 16px;
-    }
-    .header-inner .logo a {
-        display: inline-block;
-        width: 100px;
-        line-height: 1;
-    }
-    .header-util {
-        display: flex;
-        gap: 10px;
-        flex: 1;
-        align-items: center;
-        justify-content: flex-end;
-    }
+body {
+    min-width: 360px;
+    margin: 0;
+}
 
-    /* 검색 */
-    .header-search {
-        position: relative;
-        width: 24px;
-    }
 
-    /* 검색창 숨기기 */
-    .search-form { display: none;}
+/* 헤더 */
+#header {
+    padding: 0 15px;
+}
 
-    /* 검색 아이콘 버튼 */
-    .search-open {
-        position: absolute; top: 50%; right: 10px;
-        transform: translateY(-50%);
-        cursor: pointer;
-        color: #246BE0;
-    }
+.header-inner {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 16px;
+}
 
-    /* 검색창 열린 상태 */
-    .header-search.on {
-        width: 100%;
-        max-width: 220px; 
-    }
-    .header-search.on .search-form {
-        display: flex;
-        align-items: center;
-        width: 100%; height: 45px;
-        padding: 0 36px 0 14px;
-        border: 2px solid #3f7cff;
-        border-radius: 100px;
-    }
-    .search-form input {
-        width: 100%;
-        border: 0;
-        font-size: 13px;
-    }
 
-    /* 로그인 아이콘 */
-    .header-util .login {
-        flex-shrink: 0;
-        color: #246BE0;
-    }
+/* 로고 */
+.header-inner .logo {
+    flex-shrink: 0;
+}
 
-/*  */
+.header-inner .logo a {
+    display: inline-block;
+    width: 100px;
+    line-height: 1;
+}
+
+.header-inner .logo img {
+    display: block;
+    width: 100%;
+}
+
+
+/* 헤더 유틸 */
+.header-util {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* 검색 */
+.header-search {
+    position: relative;
+    width: 24px;
+    flex-shrink: 0;
+}
+
+.search-form {
+    display: none;
+}
+
+.search-open {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #246BE0;
+    border: 0;
+    background: transparent;
+}
+
+
+/* 검색 활성화 */
+.header-search.on {
+    flex: 1;
+    width: auto;
+    max-width: 220px;
+    min-width: 0;
+}
+
+.header-search.on .search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    padding: 0 36px 0 14px;
+    border: 2px solid #3f7cff;
+    border-radius: 100px;
+}
+
+.search-form input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    font-size: 13px;
+}
+
+.search-form input:focus {
+    outline: none;
+}
+
+
+/* 로그인 아이콘 */
+.header-util .login {
+    flex-shrink: 0;
+    color: #246BE0;
+}
+
 
 /* GNB */
-    .gnb-wrap { margin-left: auto; }
-
-    .gnb-wrap {
-        position: relative; 
-    }
-    .gnb-open-btn {
-        position: relative;
-        z-index: 20;
-    }
-
-    .gnb-box {
-        display: none;
-        position: fixed; left: 0; top: 0;
-        z-index: 10;
-        width: 100%;
-        height: 100vh;  /* vh : viewpote height 기기의 높이 기반 */
-        background-color: #EFF5FF;
-    }
-    .gnb-box .gnb-top {
-        padding: 16px 24px;
-        border-bottom: 1px solid #ccc;
-        background-color: #fff;
-    }
-    #gnb .main {
-        width: 38%;
-        padding: 8px 16px;
-    }
-    #gnb .main .tit {
-        font-size: 17px;
-    }
-    #gnb .main .sub {
-        display: none;
-    }
-
-    /* 주메뉴 활성화 */
-    .gnb-open-btn.on {
-        position: absolute; right: 0; top: -65px;
-    }
-    .gnb-box.show {
-        display: flex;
-        flex-direction: column;
-    }
-    .gnb-box.show #gnb {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding: 16px 8px;
-    }
-    .gnb-box.show #gnb .main.on {
-        display: flex;
-        background-color: #246BE0;
-        box-shadow: 1px 1px 3px 0px gray;
-    }
-    .gnb-box.show #gnb .main.on .tit {
-        font-weight: 700;
-        color: white;
-    }
-    .gnb-box.show #gnb .main.on .sub {
-        display: block;
-        z-index: -1;
-        position: absolute; top: 0;right: 0;
-        width: 65%; height: 100vh;
-        background-color: #fff;
-        padding: 24px 32px;
-    }
-    .gnb-box.show #gnb .main.on .sub li {
-        padding: 8px 12px;
-        border-bottom: 1px dashed #d0d9e9;
-    }
+.gnb-wrap {
+    position: relative;
+}
 
 
-@media screen and (min-width: 880px){
-    /* GNB */
-    .gnb-wrap {
-        margin-left: 0;
-    }
+/* 모바일 메뉴 버튼 */
+.gnb-open-btn {
+    position: relative;
+    z-index: 20;
+}
 
-    .gnb-open-btn {
-        display: none;
-    }
+.gnb-open-btn a {
+    display: block;
+    line-height: 1;
+}
 
-    .gnb-box {
-        display: block;
-        position: static;
-        z-index: auto;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-    }
 
-    .gnb-box .gnb-top {
-        display: none;
-    }
+/* 모바일 메뉴 박스 */
+.gnb-box {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background-color: #EFF5FF;
+}
 
-    #gnb {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 8px;
-        padding: 0 16px;
-    }
 
-    #gnb .main {
-        flex: 1;
-        width: auto;
-        padding: 0;
-    }
+/* 모바일 메뉴 상단 */
+.gnb-box .gnb-top {
+    padding: 16px 24px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
 
-    #gnb .main a {
-        display: inline-block;
-        padding: 10px 16px 20px;
-        font-weight: 500;
-    }
 
-    #gnb .main.on .tit {
-        width: 100%;
-        font-size: 20px;
-        border-bottom: 5px solid #246BE0;
-    }
+/* 메뉴 리스트 */
+#gnb {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-    #gnb .main.on .sub {
-        display: block;
-        background-color: #246ce010;
-    }
+#gnb .main {
+    width: 38%;
+    padding: 8px 16px;
+}
+
+#gnb .main .tit {
+    font-size: 17px;
+}
+
+#gnb .main .sub {
+    display: none;
+    margin: 0; padding: 0;
+    list-style: none;
+}
+
+
+/* 모바일 메뉴 열림 */
+.gnb-open-btn.on {
+    position: fixed;
+    right: 15px;
+    top: 11px;
+}
+
+.gnb-box.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.gnb-box.show #gnb {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 8px;
+}
+
+.gnb-box.show #gnb .main.on {
+    display: flex;
+    background-color: #246BE0;
+    box-shadow: 1px 1px 3px 0 gray;
+}
+
+.gnb-box.show #gnb .main.on .tit {
+    font-weight: 700;
+    color: #fff;
+}
+
+.gnb-box.show #gnb .main.on .sub {
+    z-index: -1;
+    display: block;
+    position: absolute; top: 0; right: 0;
+    width: 65%; height: 100vh;
+    padding: 24px 24px 5%;
+    background-color: #fff;
+}
+
+.gnb-box.show #gnb .main.on .sub li {
+    padding: 8px 12px;
+    border-bottom: 1px dashed #d0d9e9;
+}
+
+
+/* 데스크탑 GNB */
+.gnb-box.desktop {
+    display: block;
+    position: static;
+    z-index: auto;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+.gnb-box.desktop .gnb-top {
+    display: none;
+}
+
+.gnb-open-btn.desktop {
+    display: none;
+}
+
+.gnb-box.desktop #gnb {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 16px;
+}
+
+.gnb-box.desktop #gnb .main {
+    flex: 1;
+    width: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.gnb-box.desktop #gnb .main .tit {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 16px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222;
+}
+
+.gnb-box.desktop #gnb .main.on .tit {
+    border-bottom: 5px solid #246BE0;
+}
+
+.gnb-box.desktop #gnb .main .sub {
+    display: none;
+}
+
+.gnb-box.desktop #gnb .main.on .sub {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 16px;
+    background-color: #246ce010;
+}
+
+.gnb-box.desktop #gnb .main.on .sub li {
+    padding: 6px 0;
+    border-bottom: 0;
 }
