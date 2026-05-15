@@ -130,6 +130,11 @@ body {
 .gnb-open-btn a {
     display: block;
     line-height: 1;
+    background: url("../images/menu.svg") no-repeat center / contain;
+}
+.gnb-open-btn.on a {
+    width: 32px; height: 32px;
+    background: url("../images/close.svg") no-repeat center / contain;
 }
 
 
@@ -213,7 +218,7 @@ body {
     display: block;
     position: absolute; top: 0; right: 0;
     width: 65%; height: 100vh;
-    padding: 24px 24px 5%;
+    padding: 24px 5%;
     background-color: #fff;
 }
 
@@ -222,68 +227,67 @@ body {
     border-bottom: 1px dashed #d0d9e9;
 }
 
-
-/* 데스크탑 GNB */
-.gnb-box.desktop {
-    display: block;
-    position: static;
-    z-index: auto;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-}
-
-.gnb-box.desktop .gnb-top {
-    display: none;
-}
-
-.gnb-open-btn.desktop {
-    display: none;
-}
-
-.gnb-box.desktop #gnb {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 0 16px;
-}
-
-.gnb-box.desktop #gnb .main {
-    flex: 1;
-    width: auto;
-    padding: 0;
-    text-align: center;
-}
-
-.gnb-box.desktop #gnb .main .tit {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 16px 20px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #222;
-}
-
-.gnb-box.desktop #gnb .main.on .tit {
-    border-bottom: 5px solid #246BE0;
-}
-
-.gnb-box.desktop #gnb .main .sub {
-    display: none;
-}
-
-.gnb-box.desktop #gnb .main.on .sub {
-    display: block;
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 16px;
-    background-color: #246ce010;
-}
-
-.gnb-box.desktop #gnb .main.on .sub li {
-    padding: 6px 0;
-    border-bottom: 0;
+@media screen and (min-width: 880px) {
+    /* 데스크탑 GNB */
+    .gnb-box.desktop {
+        display: block;
+        position: relative;
+        background-color: transparent;
+    }
+    
+    .gnb-box.desktop .gnb-top {
+        display: none;
+    }
+    
+    .gnb-open-btn.desktop {
+        display: none;
+    }
+    
+    .gnb-box.desktop #gnb {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 0 16px;
+    }
+    
+    .gnb-box.desktop #gnb .main {
+        flex: 1;
+        width: auto;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .gnb-box.desktop #gnb .main .tit {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #222;
+    }
+    
+    .gnb-box.desktop #gnb .main.on .tit {
+        border-bottom: 5px solid #246BE0;
+    }
+    
+    .gnb-box.desktop #gnb .main .sub {
+        display: none;
+    }
+    
+    .gnb-box.desktop #gnb .main.on .sub {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 16px;
+        background-color: #246ce010;
+    }
+    
+    .gnb-box.desktop #gnb .main.on .sub li {
+        padding: 6px 0;
+        border-bottom: 0;
+        text-align: left;
+    }
 }
