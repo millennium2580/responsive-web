@@ -5,17 +5,19 @@ const searchInput = document.querySelector('#headerSearch');
 
 const gnbOpenBtn = document.querySelector(".gnb-open-btn");
 const gnbBox = document.querySelector(".gnb-box");
+const mainMenus = document.querySelectorAll("#gnb .main");
+
 
 // 헤더 통합검색 활성화
 searchOpen.addEventListener('click', function () {
     headerSearch.classList.add("on");
     searchInput.focus();
 });
-// 마우스가 영역을 벗어나면 다시 꺼지게?
 
-/* 데스크탑 버전으로 변경 */
-const browserWidth = window.innerWidth;
+
+/* 데스크탑 / 모바일 모드 변경 */
 function GnbMode() {
+    const browserWidth = window.innerWidth;
 
     if (browserWidth >= 880) {
         gnbBox.classList.add("desktop");
@@ -34,6 +36,10 @@ function GnbMode() {
 GnbMode();
 
 
+/* 브라우저 리사이즈 시 모드 변경 */
+window.addEventListener("resize", GnbMode);
+
+
 /* 모바일 메뉴 토글 */
 gnbOpenBtn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -42,7 +48,7 @@ gnbOpenBtn.addEventListener("click", function (e) {
 
     gnbBox.classList.toggle("show");
 
-    if(gnbBox.classList.contains("show")){
+    if (gnbBox.classList.contains("show")) {
         gnbOpenBtn.classList.add("on");
     } else {
         gnbOpenBtn.classList.remove("on");
@@ -50,5 +56,19 @@ gnbOpenBtn.addEventListener("click", function (e) {
 });
 
 
-// window 브라우저 리사이즈시 동작 변화를 주고 싶을 때
-// - resize() : 1px만 달라져도 실행됨 > 성능에 영향을 줌 >> 브라우저 과부화, 모바일일 때 배터리 과사용 및 성능 이슈
+/* 모바일 카테고리 선택 */
+mainMenus.forEach(function (main) {
+    const title = main.querySelector(".tit");
+
+    title.addEventListener("click", function (e) {
+        if (gnbBox.classList.contains("desktop")) return;
+
+        e.preventDefault();
+
+        mainMenus.forEach(function (item) {
+            item.classList.remove("on");
+        });
+
+        main.classList.add("on");
+    });
+});
