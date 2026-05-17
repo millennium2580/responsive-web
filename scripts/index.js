@@ -7,13 +7,11 @@ const gnbOpenBtn = document.querySelector(".gnb-open-btn");
 const gnbBox = document.querySelector(".gnb-box");
 const mainMenus = document.querySelectorAll("#gnb .main");
 
-
 // 헤더 통합검색 활성화
 searchOpen.addEventListener('click', function () {
     headerSearch.classList.add("on");
     searchInput.focus();
 });
-
 
 /* 데스크탑 / 모바일 모드 변경 */
 function GnbMode() {
@@ -32,7 +30,6 @@ function GnbMode() {
 }
 GnbMode();
 
-
 /* 모바일 메뉴 토글 */
 gnbOpenBtn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -47,7 +44,6 @@ gnbOpenBtn.addEventListener("click", function (e) {
         gnbOpenBtn.classList.remove("on");
     }
 });
-
 
 /* 모바일 카테고리 선택 */
 mainMenus.forEach(function (main) {
@@ -65,7 +61,6 @@ mainMenus.forEach(function (main) {
         main.classList.add("on");
     });
 });
-
 
 /* 리사이즈 대응해서 GNB 모드 적용 */
 let resizeTimer;

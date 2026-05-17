@@ -9,7 +9,6 @@ showPage();
 
 // 숫자 클릭
 for (let i = 0; i < num.length; i++) {
-
     num[i].addEventListener("click", function () {
 
         for (let j = 0; j < num.length; j++) {
@@ -18,32 +17,26 @@ for (let i = 0; i < num.length; i++) {
 
         this.classList.add("on");
     });
-
 }
 
 // 다음
 nextBtn.addEventListener("click", function () {
-
     if (start < 5) {
         start += 5;
         showPage();
     }
-
 });
 
 // 이전
 prevBtn.addEventListener("click", function () {
-
     if (start > 0) {
         start -= 5;
         showPage();
     }
-
 });
 
 // 페이지 보여주기
 function showPage() {
-
     for (let i = 0; i < num.length; i++) {
         num[i].style.display = "none";
         num[i].classList.remove("on");
