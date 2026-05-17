@@ -215,81 +215,80 @@ body { min-width: 360px; margin: 0; }
 }
 
 
-/* 데스크탑 GNB */
-.gnb-box.desktop {
-    display: block;
-    position: static;
-    z-index: auto;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-}
-
-.gnb-box.desktop .gnb-top {
-    display: none;
-}
-
-.gnb-open-btn.desktop {
-    display: none;
-}
-
-.gnb-box.desktop #gnb {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 0;
-    padding: 0 16px;
-}
-
-.gnb-box.desktop #gnb .main {
-    flex: 1;
-    width: auto;
-    padding: 0;
-    text-align: center;
-}
-
-.gnb-box.desktop #gnb .main .tit {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 16px 20px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #222;
-}
-
-
-/* 데스크탑 서브메뉴 기본 숨김 */
-.gnb-box.desktop #gnb .main .sub {
-    display: none;
-    width: auto;
-    height: auto;
-    padding: 16px;
-    background-color: transparent;
-}
-
-
-/* 데스크탑 GNB 전체 hover 시 모든 서브메뉴 표시 */
-.gnb-box.desktop:hover #gnb .main .sub {
-    display: block;
-}
-
-
-/* 데스크탑 전체 서브메뉴 배경 */
-.gnb-box.desktop:hover #gnb {
-    background-color: #246ce010;
-}
-
-
-/* 데스크탑 현재 hover된 카테고리 강조 */
-.gnb-box.desktop #gnb .main:hover .tit {
-    border-bottom: 5px solid #246BE0;
-}
-
-
-/* 데스크탑 서브메뉴 항목 */
-.gnb-box.desktop #gnb .main .sub li {
-    text-align: left;
-    padding: 6px 0;
-    border-bottom: 0;
+@media screen and (min-width: 880px) {
+    /* 데스크탑 GNB */
+    .gnb-box.desktop {
+        display: block;
+        position: relative;
+        background-color: transparent;
+    }
+    
+    .gnb-box.desktop .gnb-top {
+        display: none;
+    }
+    
+    .gnb-open-btn.desktop {
+        display: none;
+    }
+    
+    .gnb-box.desktop #gnb {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 0;
+        padding: 0 16px;
+    }
+    
+    .gnb-box.desktop #gnb .main {
+        flex: 1;
+        width: auto;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .gnb-box.desktop #gnb .main .tit {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 20px;
+        font-weight: 500;
+        color: #222;
+        border-bottom: 5px solid transparent;
+    }
+    
+    
+    /* 데스크탑 서브메뉴 기본 숨김 */
+    .gnb-box.desktop #gnb .main .sub {
+        display: none;
+        width: auto; height: 370px;
+        padding: 16px;
+        background-color: transparent;
+    }
+    
+    
+    /* 데스크탑 GNB 전체 hover 시 모든 서브메뉴 표시 */
+    .gnb-box.desktop:hover #gnb .main .sub {
+        display: block;
+    }
+    
+    
+    /* 데스크탑 전체 서브메뉴 배경 */
+    .gnb-box.desktop:hover #gnb .main:hover .sub {
+        background-color: #246ce010;
+    }
+    
+    
+    /* 데스크탑 현재 hover된 카테고리 강조 */
+    .gnb-box.desktop #gnb .main:hover .tit {
+        border-bottom-color: #246BE0;
+    }
+    
+    
+    /* 데스크탑 서브메뉴 항목 */
+    .gnb-box.desktop #gnb .main .sub li {
+        text-align: left;
+        padding: 6px 0;
+        border-bottom: 0;
+    }
 }

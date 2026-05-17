@@ -30,14 +30,7 @@ function GnbMode() {
         gnbOpenBtn.classList.remove("desktop");
     }
 }
-
-
-/* 초기 실행 */
 GnbMode();
-
-
-/* 브라우저 리사이즈 시 모드 변경 */
-window.addEventListener("resize", GnbMode);
 
 
 /* 모바일 메뉴 토글 */
@@ -71,4 +64,16 @@ mainMenus.forEach(function (main) {
 
         main.classList.add("on");
     });
+});
+
+
+/* 리사이즈 대응해서 GNB 모드 적용 */
+let resizeTimer;
+
+window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(function () {
+        GnbMode();
+    }, 200);
 });
