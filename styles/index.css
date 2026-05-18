@@ -1,22 +1,13 @@
 /* reset */
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-h1 {
-    margin-bottom: 0;
-}
+h1 { margin-bottom: 0; }
 
-body {
-    min-width: 360px;
-    margin: 0;
-}
+body { min-width: 360px; margin: 0; }
 
 
 /* 헤더 */
-#header {
-    padding: 0 15px;
-}
+#header { padding: 0 15px; }
 
 .header-inner {
     display: flex;
@@ -28,14 +19,11 @@ body {
 
 
 /* 로고 */
-.header-inner .logo {
-    flex-shrink: 0;
-}
+.header-inner .logo { flex-shrink: 0; }
 
 .header-inner .logo a {
     display: inline-block;
     width: 100px;
-    line-height: 1;
 }
 
 .header-inner .logo img {
@@ -126,16 +114,14 @@ body {
     position: relative;
     z-index: 20;
 }
+.gnb-open-btn .on{display: none;}
+.gnb-open-btn .off{display: block;}
 
-.gnb-open-btn a {
-    display: block;
-    line-height: 1;
-    background: url("../images/menu.svg") no-repeat center / contain;
-}
 .gnb-open-btn.on a {
     width: 32px; height: 32px;
-    background: url("../images/close.svg") no-repeat center / contain;
 }
+.gnb-open-btn.on .on {display: block;}
+.gnb-open-btn.on .off {display: none;}
 
 
 /* 모바일 메뉴 박스 */
@@ -177,7 +163,8 @@ body {
 
 #gnb .main .sub {
     display: none;
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -216,9 +203,12 @@ body {
 .gnb-box.show #gnb .main.on .sub {
     z-index: -1;
     display: block;
-    position: absolute; top: 0; right: 0;
-    width: 65%; height: 100vh;
-    padding: 24px 5%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100vh;
+    padding: 24px 24px 5%;
     background-color: #fff;
 }
 
@@ -246,7 +236,7 @@ body {
     .gnb-box.desktop #gnb {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: stretch;
         justify-content: space-between;
         gap: 8px;
         padding: 0 16px;
@@ -262,32 +252,47 @@ body {
     .gnb-box.desktop #gnb .main .tit {
         display: inline-block;
         width: 100%;
-        padding: 10px 0px;
+        padding: 10px 0;
         font-size: 20px;
         font-weight: 500;
         color: #222;
+        border-bottom: 5px solid transparent;
     }
     
-    .gnb-box.desktop #gnb .main.on .tit {
-        border-bottom: 5px solid #246BE0;
-    }
-    
+    /* 데스크탑 서브메뉴 기본 숨김 */
     .gnb-box.desktop #gnb .main .sub {
         display: none;
+        width: auto; height: 370px;
+        padding: 16px;
+        background-color: transparent;
     }
     
-    .gnb-box.desktop #gnb .main.on .sub {
+    
+    /* 데스크탑 GNB 전체 hover 시 모든 서브메뉴 표시 */
+    .gnb-box.desktop:hover #gnb .main .sub {
         display: block;
-        position: static;
-        width: auto;
-        height: auto;
-        padding: 16px;
+    }
+    
+    
+    /* 데스크탑 전체 서브메뉴 배경 */
+    .gnb-box.desktop:hover #gnb .main:hover .sub {
         background-color: #246ce010;
     }
+    .gnb-box.desktop:hover #gnb .main .sub li:hover {
+        font-weight: 700;
+    }
     
-    .gnb-box.desktop #gnb .main.on .sub li {
+    
+    /* 데스크탑 현재 hover된 카테고리 강조 */
+    .gnb-box.desktop #gnb .main:hover .tit {
+        border-bottom-color: #246BE0;
+    }
+    
+    
+    /* 데스크탑 서브메뉴 항목 */
+    .gnb-box.desktop #gnb .main .sub li {
+        text-align: left;
         padding: 6px 0;
         border-bottom: 0;
-        text-align: left;
     }
 }
