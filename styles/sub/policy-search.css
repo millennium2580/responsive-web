@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    max-width: 810px;
 
     height: auto;
     padding: 0 10px;
@@ -30,6 +31,7 @@
     align-items: center;
     gap: 5px;
     width:100%;
+    padding: 0 13px;
     border: 1px solid #003675;
     border-radius: 100px;
 }
@@ -43,6 +45,11 @@
 .search .submit,
 .search .reset {
     width: 50px;
+    padding: 10px;
+    color: #003675;
+}
+.search .reset img{
+    width: auto; height: auto;
 }
 
 .search .detail {
@@ -60,7 +67,8 @@
 .policy-category ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
+    column-gap: 4px;
+    row-gap : 16px;
     place-items: stretch;
     justify-items: center;
 }
@@ -204,7 +212,7 @@
 
 .list-filter .filter label {
     position: relative;
-    padding-right: 52px;
+    padding-right: 48px;
     font-size: 15px;
 }
 
@@ -390,9 +398,6 @@
 
 /* 태블릿 */
 @media screen and (min-width: 480px) {
-    .policy-category ul {
-        grid-template-columns: repeat(3, 1fr);
-    }
     .search fieldset {
         flex-direction: row;
         height: 50px;
@@ -451,6 +456,9 @@
     .policy-category ul {
         grid-template-columns: repeat(6, 1fr);
     }
+    .policy-category ul li{ width: 90px; }
+    .policy-category ul .img-mask{height: 90px;}
+    .policy-category ul .img-mask .icon-l {width: 48px; height: 48px;}
 
     .compare {
         grid-template-columns: repeat(1, 1fr);
