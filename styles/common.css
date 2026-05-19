@@ -221,6 +221,10 @@ button {
     font-size: 15px;
     margin-bottom: 10px;
 }
+.sub-nav li{
+    display: flex;
+    align-items:flex-end;
+}
 .sub-nav a {
     text-decoration: underline; /*글자 아래 밑줄*/
     text-underline-offset: 5px; /* 글자와 밑줄 사이의 간격 */

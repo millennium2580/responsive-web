@@ -1,8 +1,6 @@
 /* reset */
 * { box-sizing: border-box; }
-
-h1 { margin-bottom: 0; }
-body {background-color: #246BE0;}
+.logo { margin-bottom: 0; }
 
 #header {
     background-color: #fff;
@@ -22,11 +20,6 @@ body {background-color: #246BE0;}
 .header-inner .logo a {
     display: inline-block;
     width: 100px;
-}
-
-.header-inner .logo img {
-    display: block;
-    width: 100%;
 }
 
 
@@ -159,7 +152,7 @@ body {background-color: #246BE0;}
     padding: 8px 16px;
 }
 
-#gnb .main .tit {
+#gnb .main .tit-gnb {
     font-size: 17px;
 }
 
@@ -198,7 +191,7 @@ body {background-color: #246BE0;}
     box-shadow: 1px 1px 3px 0 gray;
 }
 
-.gnb-box.show #gnb .main.on .tit {
+.gnb-box.show #gnb .main.on .tit-gnb {
     font-weight: 700;
     color: #fff;
 }
@@ -212,7 +205,6 @@ body {background-color: #246BE0;}
     width: 65%;
     height: 100vh;
     padding: 24px 24px 5%;
-    background-color: #fff;
 }
 
 .gnb-box.show #gnb .main.on .sub li {
@@ -234,7 +226,7 @@ body {background-color: #246BE0;}
         width: 100vw;
         height: 100%;
         background-color: #fff;
-        border-radius: 10px;
+        border-bottom: 2px solid #D0D5DD;
         z-index: -1;
     }
 
@@ -261,7 +253,6 @@ body {background-color: #246BE0;}
         align-items: stretch;
         justify-content: space-between;
         gap: 8px;
-        border-radius: 10px;
     }
     
     .gnb-box.desktop #gnb .main {
@@ -273,7 +264,7 @@ body {background-color: #246BE0;}
         flex-direction: column;
     }
     
-    .gnb-box.desktop #gnb .main .tit {
+    .gnb-box.desktop #gnb .main .tit-gnb {
         display: inline-block;
         width: 100%;
         padding: 10px 10px;
@@ -310,7 +301,7 @@ body {background-color: #246BE0;}
     
     
     /* 데스크탑 현재 hover된 카테고리 강조 */
-    .gnb-box.desktop #gnb .main:hover .tit {
+    .gnb-box.desktop #gnb .main:hover .tit-gnb {
         border-bottom-color: #246BE0;
     }
     

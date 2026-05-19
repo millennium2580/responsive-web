@@ -84,14 +84,13 @@
 }
 .album-list .top .cate {
     border: 1px solid #c6c6c6;
-    padding: 0 8px;
+    padding: 4px 8px;
     border-radius: 4px;
     font-size: 14px;
 }
 .album-list .top .share {
     width: 20px; height: 20px;
     border-radius: 100%;
-    background-color: #5C5C5C;
     position: absolute; top: 50%; right: 20px;
 }
 
