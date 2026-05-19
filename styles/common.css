@@ -113,7 +113,7 @@ button {
 /* #main { padding: 0 15px; } */
 .wrapper { width: 100%; min-width: 320px; }
 .container { width: 100%; }
-.inner { width: 100%; min-width: 360px; max-width: 1200px; margin: 0 auto; padding: 0 15px; background-color: #fff; }
+.inner { width: 100%; min-width: 360px; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
 
 /* 4. 공통 UI 컴포넌트 */
 .img-box { overflow: hidden; }
@@ -338,7 +338,7 @@ a:hover{
     display: block;
 }
 
-.sub-search-area .select p img {
+.sub-search-area .select p svg {
     position: absolute; top: 8px; right: 10px;
     width: 20px;
     height: 20px;
@@ -432,8 +432,6 @@ a:hover{
     body { 
         font-size: 18px;
     }
-
-    .inner { padding: 0; }
 
     /* 사이드/메인 레이아웃 */
     .container {

@@ -3,12 +3,12 @@
 
 h1 { margin-bottom: 0; }
 
-body { min-width: 360px; margin: 0; }
-
+body {background-color: #246BE0;}
 
 /* 헤더 */
-#header { padding: 0 15px; }
-
+#header {
+    background-color: #fff;
+}
 .header-inner {
     display: flex;
     gap: 16px;
@@ -106,6 +106,7 @@ body { min-width: 360px; margin: 0; }
 /* GNB */
 .gnb-wrap {
     position: relative;
+    z-index: 100;
 }
 
 
@@ -136,7 +137,6 @@ body { min-width: 360px; margin: 0; }
     top: 0;
     z-index: 10;
     width: 100%;
-    height: 100vh;
     background-color: #EFF5FF;
 }
 
@@ -222,12 +222,31 @@ body { min-width: 360px; margin: 0; }
     border-bottom: 1px dashed #d0d9e9;
 }
 
+/* 데스크탑 GNB */
 @media screen and (min-width: 960px) {
-    /* 데스크탑 GNB */
+    .gnb-wrap {
+        height: 57px;
+    }
+
+    .gnb-box.desktop::before {
+        content: "";
+        position: absolute;top: 0;left: 50%;
+        transform: translateX(-50%);
+        
+        width: 100vw;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+        z-index: -1;
+    }
+
     .gnb-box.desktop {
         display: block;
-        position: relative;
-        background-color: transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 100;
     }
     
     .gnb-box.desktop .gnb-top {
@@ -244,12 +263,11 @@ body { min-width: 360px; margin: 0; }
         align-items: stretch;
         justify-content: space-between;
         gap: 8px;
-        padding: 0 16px;
+        border-radius: 10px;
     }
     
     .gnb-box.desktop #gnb .main {
         flex: 1;
-        width: auto;
         padding: 0;
         text-align: center;
 
@@ -270,17 +288,17 @@ body { min-width: 360px; margin: 0; }
     
     /* 데스크탑 서브메뉴 기본 숨김 */
     .gnb-box.desktop #gnb .main .sub {
-        flex: 1;
         display: none;
         padding: 16px;
         background-color: transparent;
         letter-spacing: -0.5px;
     }
     
-    
     /* 데스크탑 GNB 전체 hover 시 모든 서브메뉴 표시 */
     .gnb-box.desktop:hover #gnb .main .sub {
         display: block;
+        flex: 1;
+        width: 100%;
     }
     
     /* 데스크탑 전체 서브메뉴 배경 */
