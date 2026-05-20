@@ -50,7 +50,7 @@ gnbOpenBtn.addEventListener("click", function (e) {
 
 /* 모바일 카테고리 선택 */
 main.forEach(function (m) {
-    const title = m.querySelector(".h-tit");
+    const title = m.querySelector(".tit-gnb");
 
     title.addEventListener("click", function (e) {
         if (gnbBox.classList.contains("desktop")) return;

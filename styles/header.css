@@ -10,7 +10,7 @@
     gap: 16px;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0 16px;
+    padding: 12px 8px 16px 12px;
 }
 
 
@@ -130,7 +130,9 @@
     width: 100%;
     background-color: #EFF5FF;
 }
-
+.gnb-box.show{
+    height: 100vh;
+}
 
 /* 모바일 메뉴 상단 */
 .gnb-box .gnb-top {
@@ -205,6 +207,7 @@
     width: 65%;
     height: 100vh;
     padding: 24px 24px 5%;
+    background-color: #fff;
 }
 
 .gnb-box.show #gnb .main.on .sub li {
@@ -226,7 +229,8 @@
         width: 100vw;
         height: 100%;
         background-color: #fff;
-        border-bottom: 2px solid #D0D5DD;
+        border-bottom: 2px solid #efefef;
+        border-top: 2px solid #efefef;
         z-index: -1;
     }
 
@@ -268,7 +272,7 @@
         display: inline-block;
         width: 100%;
         padding: 10px 10px;
-        text-align: left;
+        text-align: center;
         font-size: 20px;
         font-weight: 500;
         color: #222;
