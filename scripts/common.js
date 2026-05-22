@@ -140,30 +140,34 @@ const lastBtn = document.querySelector(".page-num-box .last");
         }
 
         for (let i = start; i < start + 5; i++) {
-
             if (num[i]) {
                 num[i].style.display = "";
             }
-
         }
 
-        num[start].classList.add("on");
+        if (num[start]) {
+            num[start].classList.add("on");
+        }
     }
+
 // 페이지번호 - end
 
 
 // 탭
 const subTab = document.querySelector(".sub-tab");
+const subTabPrev = subTab.querySelector(".prev");
+const subTabNext = subTab.querySelector(".next");
 const subTabBtns = document.querySelectorAll(".sub-tab-btn"); // li가 둘 이상, querySelectorAll 사용
 const tabDetails = document.querySelectorAll(".tab-detail") // 둘 이상, querySelectorAll 사용
 
+// 탭영역
 subTabBtns.forEach(function(btn, inx){
     btn.addEventListener("click", function(b){
-        b.preventDefault(); // 링크 안 열게 막기
+        b.preventDefault();
         subTabBtns.forEach(function(b){
-            b.classList.remove("on") // 클래스 먼저 다 제거
+            b.classList.remove("on")
         })
-        subTabBtns[inx].classList.add("on"); // 내가 누른 거(inx) 만 add
+        subTabBtns[inx].classList.add("on");
     
         tabDetails.forEach(function(b){
             b.classList.remove("on")
@@ -172,6 +176,4 @@ subTabBtns.forEach(function(btn, inx){
     })
 })
 
-// 사이드바 열림접힘 표시
-const asideWrap = document.querySelector(".aside-wrap")
-const isSub = asideWrap.querySelector(".is-sub")
+// subTabPrev.addEventListener("click", function(b))
